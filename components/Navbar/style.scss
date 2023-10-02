@@ -277,7 +277,7 @@
     position: fixed;
     display: flex;
     flex-direction: column;
-    color: white;
+    color: var(--primary);
     background-color: var(--bg-light);
     height: 100vh;
     width: 90vw;
@@ -285,6 +285,7 @@
     right: -90vw;
     transition: right 1s cubic-bezier(0.16, 1, 0.3, 1);
     z-index: 102;
+    border-left: 0.05em solid var(--color-white-300);
 
     .mobileHeader {
       width: 100%;
