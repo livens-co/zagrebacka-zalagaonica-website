@@ -66,7 +66,7 @@ const Dropdown: React.FC<DropdownProps> = ({ data }) => {
                 alt="Collection"
               />
             </div>
-            <p>Apple mobiteli</p>
+            <p>Apple proizvodi</p>
           </div>
           <div className="featuredCollection">
             <div className="collectionImage">

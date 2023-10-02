@@ -38,7 +38,7 @@ const Navbar = async () => {
         </nav>
       </div>
 
-      <MobileNavbar/>
+      <MobileNavbar data={categories}/>
     </>
   );
 };

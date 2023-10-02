@@ -15,8 +15,6 @@ export const revalidate = 3;
 const HomePage = async () => {
   const products = await getProducts({ isFeatured: true });
 
-  // console.log(products);
-
   return (
     <div className="homePage">
       {/* HERO SECTION */}
