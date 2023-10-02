@@ -1,0 +1,117 @@
+.productPage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg);
+
+  .productPageNav {
+    width: 100%;
+    // height: 3rem;
+    padding: 1.5rem 2.5rem;
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    color: var(--color-gray);
+    gap: 0.35rem;
+  }
+
+  .productContainer {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    padding: 1rem;
+    gap: 2rem;
+
+    .innerContainer {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 1rem;
+
+      .infoContainer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid var(--color-white-300);
+        margin-bottom: 1rem;
+
+        h1 {
+          font-weight: 400;
+          margin-bottom: 1.5rem;
+          text-transform: uppercase;
+        }
+
+        p {
+          color: var(--color-gray);
+          font-size: 0.9rem;
+          padding-bottom: 1rem;
+          text-transform: uppercase;
+        }
+
+        .priceContainer {
+          padding: 0.5rem 1.25rem;
+          background-color: var(--primary);
+          color: var(--bg);
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          margin-bottom: 1.5rem;
+          width: fit-content;
+          border-radius: 3px;
+
+          h2 {
+            font-size: 1rem;
+            font-weight: 400;
+            text-transform: uppercase;
+          }
+        }
+      }
+      .description {
+        width: 100%;
+        min-height: 8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--color-white-300);
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+      }
+      h3 {
+        font-weight: 400;
+        font-size: 0.9rem;
+      }
+      .contactButton {
+        width: 100%;
+        height: 4rem;
+        margin-top: 2rem;
+        background-color: var(--primary);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 300ms ease;
+        border-radius: 2px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        cursor: pointer;
+
+        a {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: var(--bg);
+        }
+
+        &:hover {
+          background-color: var(--secondary);
+
+          a {
+            color: var(--primary);
+          }
+        }
+      }
+    }
+  }
+}
