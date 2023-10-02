@@ -1,17 +1,16 @@
 import Container from '@/components/ui/container';
 import getCategories from '@/actions/get-categories';
- 
+
 import './style.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 import Dropdown from './components/dropdown';
+import MobileNavbar from './MobileNavbar';
 
 export const revalidate = 3;
 
 const Navbar = async () => {
   const categories = await getCategories();
-
-  // console.log(categories);
 
   return (
     <>
@@ -19,9 +18,8 @@ const Navbar = async () => {
         <nav>
           <div className="links">
             <Link href="/">Početna</Link>
-            <Dropdown data={categories} />
-            <Link href="/novosti">Novosti</Link>
-            <Link href="/kontakt">Kontakt</Link>
+            <Link href="/novosti">Otkup</Link>
+            <Link href="/kontakt">Zalog</Link>
           </div>
           <Link href="/" className="logo">
             <Image
@@ -32,14 +30,15 @@ const Navbar = async () => {
               alt="Zagrebačka Zalagaonica"
             />
           </Link>
-          <div className="links"></div>
+          <div className="links">
+            <Dropdown data={categories} />
+            <Link href="/novosti">Novosti</Link>
+            <Link href="/kontakt">Kontakt</Link>
+          </div>
         </nav>
       </div>
 
-      <div className="navbarMobile">
-        <h1>logo</h1>
-        <h1>X</h1>
-      </div>
+      <MobileNavbar/>
     </>
   );
 };

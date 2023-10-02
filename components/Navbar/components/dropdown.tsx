@@ -20,7 +20,7 @@ const Dropdown: React.FC<DropdownProps> = ({ data }) => {
 
   return (
     <>
-      <div className="dropdown"  >
+      <div className="dropdown">
         <Link
           href="/ponuda"
           onMouseEnter={() => setIsOpen(true)}
@@ -49,10 +49,10 @@ const Dropdown: React.FC<DropdownProps> = ({ data }) => {
           </div>
           <div className="dropdownColumn">
             <h3>Marke</h3>
-            <Link href='/'>Apple</Link>
-            <Link href='/'>Samsung</Link>
-            <Link href='/'>Xiaomi</Link>
-            <Link href='/'>Huawei</Link>
+            <Link href="/">Apple</Link>
+            <Link href="/">Samsung</Link>
+            <Link href="/">Xiaomi</Link>
+            <Link href="/">Huawei</Link>
           </div>
         </div>
         <div className="dropdownCollections">
