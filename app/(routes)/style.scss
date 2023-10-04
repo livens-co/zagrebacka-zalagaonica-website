@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   gap: var(--gap);
+  padding-bottom: 4rem;
 
   .heroSection {
     width: 100%;
@@ -230,6 +231,7 @@
   }
 
   .featuredProducts {
+    width: 100%;
     padding: 2rem 5%;
     display: flex;
     flex-direction: column;
@@ -239,6 +241,46 @@
       text-transform: uppercase;
       font-size: 2.5rem;
       color: var(--color-gray);
+    }
+  }
+
+  .featuredArticles {
+    padding: 2rem 5%;
+    display: flex;
+    flex-direction: column;
+
+    .articlesTitle {
+      font-weight: 400;
+      text-transform: uppercase;
+      font-size: 2.5rem;
+      color: var(--color-gray);
+      margin-bottom: 2rem;
+    }
+  }
+
+  .paymentMethodsSection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    padding: 0 5%;
+    gap: 2rem;
+    border-radius: 3px;
+    height: fit-content;
+
+    .gridItem {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      gap: 1rem;
+      background-color: var(--bg-light);
+      height: 100%;
+
+      svg {
+        font-size: 3rem;
+      }
     }
   }
 }

@@ -1,0 +1,34 @@
+.newsPage {
+  width: 100%;
+  padding: 2rem 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  .newsPageHeader {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    // padding: 2rem 0;
+
+    h1 {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 300;
+    }
+
+    p {
+      width: 70%;
+      font-weight: 300;
+      line-height: 1.6;
+    }
+  }
+
+  .newsPageContent {
+    padding: 2rem 0;
+  }
+}

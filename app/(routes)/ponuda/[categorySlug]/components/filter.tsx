@@ -45,7 +45,26 @@ const Filter: React.FC<FilterProps> = ({ data, name, valueKey }) => {
     );
 
     router.push(url);
-    setOpenModal(false)
+    setOpenModal(false);
+  };
+
+  const removeFilters = () => {
+    const current = qs.parse(searchParams.toString());
+    const query = {
+      ...current,
+      [valueKey]: null,
+    };
+
+    const url = qs.stringifyUrl(
+      {
+        url: window.location.href,
+        query,
+      },
+      { skipNull: true }
+    );
+
+    router.push(url);
+    setOpenModal(false);
   };
 
   return (
@@ -62,24 +81,28 @@ const Filter: React.FC<FilterProps> = ({ data, name, valueKey }) => {
         <div className="header">
           <h3>Filteri</h3>
           <button onClick={() => setOpenModal(false)} className="filterButton">
-            <CloseRoundedIcon style={{marginRight: '0rem'}}/>
+            <CloseRoundedIcon style={{ marginRight: '0rem' }} />
           </button>
         </div>
         <div className="filterList">
           {data.map((filter) => (
-           
             <button
               onClick={() => onClick(filter.brandSlug)}
               key={filter.brandSlug}
               className="filterButton"
+              style={
+                filter.brandSlug === selectedValue
+                  ? { color: 'var(--secondary)' }
+                  : { color: 'var(--primary)' }
+              }
             >
               {filter.name}
             </button>
-     
           ))}
         </div>
-        <button className='removeFiltersButton' onClick={()=>onClick('')}>
-          Ukloni filtere</button>
+        <button className="removeFiltersButton" onClick={removeFilters}>
+          Ukloni filtere
+        </button>
       </div>
     </>
   );

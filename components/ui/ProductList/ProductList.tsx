@@ -12,14 +12,13 @@ interface ProductListProps {
 const ProductList: React.FC<ProductListProps> = ({ title, items }) => {
   return (
     <div className='productList'>
-      <h3>{title}</h3>
       {items.length === 0 && <NoResults />}
-      <div className='products'>
+      {/* <div className='products'> */}
         {items.map((item) => (
           <ProductCard key={item.id} data={item}/>
-        )).slice(0,4)}
-      </div>
-    </div>
+        )).slice(1,5)}
+      {/* </div> */}
+    </div> 
   );
 };
 

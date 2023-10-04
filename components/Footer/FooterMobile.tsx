@@ -50,8 +50,8 @@ const FooterMobile = async () => {
           &copy; 2023 <CircleIcon /> Zagrebačaka zalagaonica
         </p>
         <p>
-          Developed by
-          <Link href="//www.mintlime.hr">&#160; mint&lime</Link>
+          Developed with 💙 by
+          <Link href="//www.livens.co">&#160;livens</Link>
         </p>
       </div>
     </div>

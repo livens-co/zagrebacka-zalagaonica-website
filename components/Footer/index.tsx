@@ -48,19 +48,19 @@ const Footer = async () => {
         <div className="social">
           <h2>Pratite nas:</h2>
           <div className="links">
-            <a href="/">
+            <a href="/" target='_blank'>
               <InstagramIcon />
             </a>
 
-            <a href="/">
+            <a href="/" target='_blank'>
               <PetsRoundedIcon />
             </a>
           </div>
         </div>
         <div className="legal">
           <p>
-            Developed by
-            <Link href="//www.mintlime.hr"> mint&lime</Link>
+          Developed with 💙 by
+            <Link href="//www.livens.co" target='_blank'>&#160;livens</Link>
           </p>
           <p className="copy">
             &copy; 2023 <CircleIcon /> Zagrebačaka zalagaonica

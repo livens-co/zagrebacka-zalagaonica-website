@@ -1,19 +1,7 @@
 .productList {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-  flex-direction: column;
+  display: grid;
   padding: 2rem 0;
-
-  h3 {
-    font-size: 1.5rem;
-    font-weight: 400;
-    padding-left: 1rem;
-  }
-
-  .products {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-  }
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  
 }

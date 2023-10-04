@@ -9,11 +9,18 @@ import FmdGoodRoundedIcon from '@mui/icons-material/FmdGoodRounded';
 
 import './style.scss';
 import Link from 'next/link';
+import ArticleList from '@/components/ui/ArticleList/ArticleList';
+import getBlogs from '@/actions/get-blogs';
+
+import PaymentIcon from '@mui/icons-material/Payment';
+import VerifiedIcon from '@mui/icons-material/Verified';
+import HandshakeIcon from '@mui/icons-material/Handshake';
 
 export const revalidate = 3;
 
 const HomePage = async () => {
   const products = await getProducts({ isFeatured: true });
+  const articles = await getBlogs();
 
   return (
     <div className="homePage">
@@ -35,21 +42,21 @@ const HomePage = async () => {
             na upit.
           </p>
           <div className="contact">
-            <a href="tel:+">
+            <a href="tel:+" target="_blank">
               <span>099 2137 494</span>
               <div className="icon">
                 <LocalPhoneRoundedIcon />
               </div>
               <div className="buttonAnimation" />
             </a>
-            <a href="mailto:">
+            <a href="mailto:" target="_blank">
               <span>Kontaktirajte nas</span>
               <div className="icon">
                 <MailRoundedIcon />
               </div>
               <div className="buttonAnimation" />
             </a>
-            <a href="/">
+            <a href="/" target="_blank"> 
               <span>Krapinska ulica 5</span>
               <div className="icon">
                 <FmdGoodRoundedIcon />
@@ -105,43 +112,62 @@ const HomePage = async () => {
         </div>
       </Container>
       {/* O NAMA */}
-      <Container>
-        <div className="aboutUsSection">
-          <div className="title">
-            <h1>O nama</h1>
-          </div>
-          <div className="text">
-            <p>
-              Zagrebačka zalagaonica bavi se otkupom, zalogom i prodajom
-              rabljene robe poput zlata, luksuznih satova, elektronike,
-              nekretnina, automobila te ostalih predmeta na upit.
-            </p>
-            <p>
-              Ako želite prodati svoje predmete, nudimo vam povoljne opcije
-              prodaje. Naša zalagaonica ima široku mrežu kupaca i stručno znanje
-              koje nam pomaže postići najbolje cijene za vaše predmete.
-            </p>
-            <p>
-              Ako trebate hitan kratkoročni zajam, naša usluga zaloga je idealna
-              za vas. Možete koristiti svoje predmete kao kolateral kako biste
-              dobili novčani zajam, a mi ćemo se brinuti o sigurnom čuvanju
-              vaših dragocjenosti dok ne otplatite zajam.
-            </p>
-          </div>
+
+      <div className="aboutUsSection">
+        <div className="title">
+          <h1>O nama</h1>
         </div>
-      </Container>
+        <div className="text">
+          <p>
+            Zagrebačka zalagaonica bavi se otkupom, zalogom i prodajom rabljene
+            robe poput zlata, luksuznih satova, elektronike, nekretnina,
+            automobila te ostalih predmeta na upit.
+          </p>
+          <p>
+            Ako želite prodati svoje predmete, nudimo vam povoljne opcije
+            prodaje. Naša zalagaonica ima široku mrežu kupaca i stručno znanje
+            koje nam pomaže postići najbolje cijene za vaše predmete.
+          </p>
+          <p>
+            Ako trebate hitan kratkoročni zajam, naša usluga zaloga je idealna
+            za vas. Možete koristiti svoje predmete kao kolateral kako biste
+            dobili novčani zajam, a mi ćemo se brinuti o sigurnom čuvanju vaših
+            dragocjenosti dok ne otplatite zajam.
+          </p>
+        </div>
+      </div>
 
       {/* IZDVOJENI PROIZVODI */}
-      <Container>
-        <div className="featuredProducts">
-          <h1>Izdvojeni proizvodi</h1>
-          <ProductList title="" items={products} />
-        </div>
-      </Container>
+
+      <div className="featuredProducts">
+        <h1>Izdvojeni proizvodi</h1>
+        <ProductList title="" items={products} />
+      </div>
 
       {/* SLOGAN */}
+      <h1>SLOGAN</h1>
 
       {/* NOVOSTI */}
+      <div className="featuredArticles">
+        <h1 className='articlesTitle'>Novosti</h1>
+        <ArticleList items={articles} />
+      </div>
+
+      {/* GRID NACINI PLACANJA / PROVJERENI PROIZVODI  / ISKUSTVO I POVJERENJE */}
+      <div className="paymentMethodsSection">
+        <div className="gridItem">
+          <PaymentIcon />
+          <p>Mogućnost plaćanja karticama na rate i gotovinom</p>
+        </div>
+        <div className="gridItem">
+          <VerifiedIcon />
+          <p>Provjereni proizvodi</p>
+        </div>
+        <div className="gridItem">
+          <HandshakeIcon />
+          <p>Iskustvo i povjerenje</p>
+        </div>
+      </div>
     </div>
   );
 };

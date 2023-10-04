@@ -10,6 +10,7 @@ import NoResults from '@/components/NoResults/NoResults';
 import Filter from './components/filter';
 import SortProducts from './components/sort';
 import { sortProducts } from '@/lib/utils';
+import ProductList from '@/components/ui/ProductList/ProductList';
 
 export const revalidate = 3;
 
@@ -38,14 +39,15 @@ const CategoryPage: React.FC<CategoryPageProps> = async ({
       <div className="collectionPage">
         <Container>
           <div className="categoryHeader">
-
-          {/* CATEGORY TITLE */}
-          <h1>{category.name}</h1>
-          {/* CATEGORY DESCRIPTION */}
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa repudiandae voluptatibus, facilis beatae nesciunt impedit vel quis eveniet id quam nobis cupiditate ullam repellat architecto ex, dolor amet sequi dolore?
-          </p>
-
+            {/* CATEGORY TITLE */}
+            <h1>{category.name}</h1>
+            {/* CATEGORY DESCRIPTION */}
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
+              repudiandae voluptatibus, facilis beatae nesciunt impedit vel quis
+              eveniet id quam nobis cupiditate ullam repellat architecto ex,
+              dolor amet sequi dolore?
+            </p>
           </div>
           {/* FILTERS */}
           <div className="filterRow">
@@ -56,10 +58,10 @@ const CategoryPage: React.FC<CategoryPageProps> = async ({
             </p>
           </div>
         </Container>
-        {/* <Billboard data={category.billboard} /> */}
+
         <Container>
           {products.length === 0 && <NoResults />}
-          <div className="collectionGrid">
+          <div className="productList">
             {products.map((item) => (
               <ProductCard key={item.id} data={item} />
             ))}

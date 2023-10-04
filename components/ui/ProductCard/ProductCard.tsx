@@ -1,7 +1,7 @@
 'use client';
 
 import { Product } from '@/types';
-import './style.scss';
+import './style.scss'; 
 import Image from 'next/image';
 import Link from 'next/link';
 import Currency from '../currency';
