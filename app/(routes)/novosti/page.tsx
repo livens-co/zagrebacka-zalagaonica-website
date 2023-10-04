@@ -1,9 +1,11 @@
-import './style.scss'
+import getBlogs from '@/actions/get-blogs';
+import './style.scss';
 
-const NewsPage = () => {
-  return (
-    <div>NewsPage</div>
-  )
-}
+const NewsPage = async () => {
+  const blogs = await getBlogs();
 
-export default NewsPage
+
+  return <div>NewsPage</div>;
+};
+
+export default NewsPage;

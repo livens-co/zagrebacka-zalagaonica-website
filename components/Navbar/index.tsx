@@ -1,4 +1,3 @@
-import Container from '@/components/ui/container';
 import getCategories from '@/actions/get-categories';
 
 import './style.scss';
@@ -18,8 +17,8 @@ const Navbar = async () => {
         <nav>
           <div className="links">
             <Link href="/">Početna</Link>
-            <Link href="/novosti">Otkup</Link>
-            <Link href="/kontakt">Zalog</Link>
+            <Link href="/">Otkup</Link>
+            <Link href="/">Zalog</Link>
           </div>
           <Link href="/" className="logo">
             <Image

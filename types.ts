@@ -13,6 +13,7 @@ export interface Category {
 }
 
 export interface Product {
+  date: string | number | Date;
   id: string;
   category: Category;
   name: string;
@@ -34,4 +35,12 @@ export interface Brand {
   id: string;
   brandSlug: string;
   name: string;
+}
+
+export interface Blog {
+  id: string;
+  blogSlug: string;
+  title: string;
+  content: string;
+  imageUrl: string;
 }
