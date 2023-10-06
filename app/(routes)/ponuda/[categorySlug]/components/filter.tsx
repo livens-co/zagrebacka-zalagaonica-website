@@ -14,9 +14,15 @@ interface FilterProps {
   data: Brand[];
   name: string;
   valueKey: string;
+  categorySlug: string;
 }
 
-const Filter: React.FC<FilterProps> = ({ data, name, valueKey }) => {
+const Filter: React.FC<FilterProps> = ({
+  data,
+  name,
+  valueKey,
+  categorySlug,
+}) => {
   const [openModal, setOpenModal] = useState(false);
 
   const searchParams = useSearchParams();
@@ -67,6 +73,10 @@ const Filter: React.FC<FilterProps> = ({ data, name, valueKey }) => {
     setOpenModal(false);
   };
 
+  const filteredBrands = data.filter(
+    (brand) => brand.category.categorySlug === categorySlug
+  );
+
   return (
     <>
       <button onClick={() => setOpenModal(true)} className="filterButton">
@@ -85,7 +95,7 @@ const Filter: React.FC<FilterProps> = ({ data, name, valueKey }) => {
           </button>
         </div>
         <div className="filterList">
-          {data.map((filter) => (
+          {filteredBrands.map((filter) => (
             <button
               onClick={() => onClick(filter.brandSlug)}
               key={filter.brandSlug}

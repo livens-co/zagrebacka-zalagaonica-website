@@ -7,6 +7,7 @@ import Link from 'next/link';
 
 import Currency from '@/components/ui/currency';
 import ProductList from '@/components/ui/ProductList/ProductList';
+import Markdown from 'react-markdown';
 
 export const revalidate = 3;
 
@@ -51,7 +52,7 @@ const ProductPage: React.FC<ProductPageProps> = async ({ params }) => {
             <p>{product?.brand?.name}</p>
           </div>
           <div className="description">
-            <p>{product?.description}</p>
+            <Markdown>{product?.description}</Markdown>
           </div>
           <h3>Načini plaćanja: {product?.paymentMethod}</h3>
           <div className="contactButton">
@@ -59,9 +60,11 @@ const ProductPage: React.FC<ProductPageProps> = async ({ params }) => {
           </div>
         </div>
       </div>
-      <Container>
-        <ProductList title="Povezani proizvodi" items={suggestedProducts} />
-      </Container>
+
+      <div className="suggestedProducts">
+        <h2>Povezani proizvodi</h2>
+        <ProductList title="" items={suggestedProducts} />
+      </div>
     </div>
   );
 };

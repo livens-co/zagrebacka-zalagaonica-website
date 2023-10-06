@@ -5,11 +5,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Dropdown from './components/dropdown';
 import MobileNavbar from './MobileNavbar';
+import getFeaturedBrands from '@/actions/get-featured-brands';
 
 export const revalidate = 3;
 
 const Navbar = async () => {
   const categories = await getCategories();
+
+  const brands = await getFeaturedBrands({isFeatured: true})
 
   return (
     <>
@@ -17,8 +20,8 @@ const Navbar = async () => {
         <nav>
           <div className="links">
             <Link href="/">Početna</Link>
-            <Link href="/">Otkup</Link>
-            <Link href="/">Zalog</Link>
+            <Link href="/otkup">Otkup</Link>
+            <Link href="/zalog">Zalog</Link>
           </div>
           <Link href="/" className="logo">
             <Image
@@ -30,14 +33,14 @@ const Navbar = async () => {
             />
           </Link>
           <div className="links">
-            <Dropdown data={categories} />
+            <Dropdown data={categories} brands={brands} />
             <Link href="/novosti">Novosti</Link>
             <Link href="/kontakt">Kontakt</Link>
           </div>
         </nav>
       </div>
 
-      <MobileNavbar data={categories}/>
+      <MobileNavbar data={categories} />
     </>
   );
 };

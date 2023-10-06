@@ -3,19 +3,25 @@
 import '../style.scss';
 import { useState } from 'react';
 import Link from 'next/link';
-import { Category } from '@/types';
+import { Brand, Category } from '@/types';
 import Image from 'next/image';
 
 interface DropdownProps {
   data: Category[];
+  brands: Brand[];
 }
 
-const Dropdown: React.FC<DropdownProps> = ({ data }) => {
+const Dropdown: React.FC<DropdownProps> = ({ data, brands }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const routes = data.map((route) => ({
     href: `/ponuda/${route.categorySlug}`,
     label: route.name,
+  }));
+
+  const brandRoutes = brands.map((brand) => ({
+    href: `/ponuda/mobiteli?brandSlug=${brand.brandSlug}`,
+    label: brand.name,
   }));
 
   return (
@@ -48,11 +54,17 @@ const Dropdown: React.FC<DropdownProps> = ({ data }) => {
             ))}
           </div>
           <div className="dropdownColumn">
-            <h3>Marke</h3>
-            <Link href="/">Apple</Link>
-            <Link href="/">Samsung</Link>
-            <Link href="/">Xiaomi</Link>
-            <Link href="/">Huawei</Link>
+            <h3>Mobiteli</h3>
+
+            {brandRoutes.map((brand) => (
+              <Link
+                key={brand.href}
+                href={brand.href}
+                onClick={() => setIsOpen(!isOpen)}
+              >
+                {brand.label}
+              </Link>
+            ))}
           </div>
         </div>
         <div className="dropdownCollections">

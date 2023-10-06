@@ -10,7 +10,6 @@ import NoResults from '@/components/NoResults/NoResults';
 import Filter from './components/filter';
 import SortProducts from './components/sort';
 import { sortProducts } from '@/lib/utils';
-import ProductList from '@/components/ui/ProductList/ProductList';
 
 export const revalidate = 3;
 
@@ -34,24 +33,21 @@ const CategoryPage: React.FC<CategoryPageProps> = async ({
   const category = await getCategory(params.categorySlug);
   const brands = await getBrands();
 
+
   return (
     <>
       <div className="collectionPage">
         <Container>
           <div className="categoryHeader">
-            {/* CATEGORY TITLE */}
-            <h1>{category.name}</h1>
-            {/* CATEGORY DESCRIPTION */}
+        
+            <h1>{category?.name}</h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
-              repudiandae voluptatibus, facilis beatae nesciunt impedit vel quis
-              eveniet id quam nobis cupiditate ullam repellat architecto ex,
-              dolor amet sequi dolore?
+              {category?.description}
             </p>
           </div>
           {/* FILTERS */}
           <div className="filterRow">
-            <Filter valueKey="brandSlug" name="Brendovi" data={brands} />
+            <Filter valueKey="brandSlug" name="Brendovi" data={brands} categorySlug={category.categorySlug}/>
             <p>
               {products.length}{' '}
               {products.length === 1 ? 'proizvod' : 'proizvoda'}

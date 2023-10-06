@@ -26,9 +26,8 @@ const ArticleList: React.FC<ArticleListProps> = ({ items }) => {
             <div className="articleCardImage">
               <Image fill src={item.imageUrl} alt={item.title} />
             </div>
-            <h3>{item.title}</h3>
-
-            <Markdown>{item.content.slice(0, 150)}</Markdown>
+            <h3>{item?.title}</h3>
+            <p>{item?.description}</p>
           </Link>
         ))
         .slice(0, 2)}

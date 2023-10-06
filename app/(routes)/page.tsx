@@ -56,7 +56,7 @@ const HomePage = async () => {
               </div>
               <div className="buttonAnimation" />
             </a>
-            <a href="/" target="_blank"> 
+            <a href="/" target="_blank">
               <span>Krapinska ulica 5</span>
               <div className="icon">
                 <FmdGoodRoundedIcon />
@@ -79,7 +79,7 @@ const HomePage = async () => {
               />
               <div className="overlay" />
             </div>
-            <Link href="/" className="serviceTitle">
+            <Link href="/otkup" className="serviceTitle">
               Otkup
             </Link>
           </div>
@@ -92,7 +92,7 @@ const HomePage = async () => {
               />
               <div className="overlay" />
             </div>
-            <Link href="/" className="serviceTitle">
+            <Link href="/zalog" className="serviceTitle">
               Zalog
             </Link>
           </div>
@@ -105,7 +105,7 @@ const HomePage = async () => {
               />
               <div className="overlay" />
             </div>
-            <Link href="/" className="serviceTitle">
+            <Link href="/ponuda" className="serviceTitle">
               Prodaja
             </Link>
           </div>
@@ -149,7 +149,7 @@ const HomePage = async () => {
 
       {/* NOVOSTI */}
       <div className="featuredArticles">
-        <h1 className='articlesTitle'>Novosti</h1>
+        <h1 className="articlesTitle">Novosti</h1>
         <ArticleList items={articles} />
       </div>
 

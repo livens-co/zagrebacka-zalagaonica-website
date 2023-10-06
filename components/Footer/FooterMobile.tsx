@@ -18,12 +18,12 @@ const FooterMobile = async () => {
       <BackToTop />
       <div className="links">
         <Link href="/">Početna</Link>
-        <Link href="/">Otkup</Link>
-        <Link href="/">Zakup</Link>
+        <Link href="/otkup">Otkup</Link>
+        <Link href="/zakup">Zakup</Link>
         <MobileDropdown data={categories} />
-        <Link href="/">Novosti</Link>
-        <Link href="/">Kontakt</Link>
-        <Link href="/">Zaštita privatnosti</Link>
+        <Link href="/novosti">Novosti</Link>
+        <Link href="/kontakt">Kontakt</Link>
+        <Link href="/zastita-podataka">Zaštita privatnosti</Link>
       </div>
       <div className="social">
         <h3>Pratite nas:</h3>

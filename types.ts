@@ -8,8 +8,9 @@ export interface Category {
   id: string;
   categorySlug: string;
   name: string;
-  billboardId: any;
-  billboard: Billboard;
+  description: string;
+  imageUrl: string;
+  isActive: boolean;
 }
 
 export interface Product {
@@ -35,6 +36,9 @@ export interface Brand {
   id: string;
   brandSlug: string;
   name: string;
+  category: Category;
+  isActive: boolean;
+  isFeatured: boolean;
 }
 
 export interface Blog {
@@ -43,4 +47,6 @@ export interface Blog {
   title: string;
   content: string;
   imageUrl: string;
+  date: string;
+  description: string;
 }

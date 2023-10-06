@@ -48,8 +48,8 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({ data }) => {
         <div className="innerContainer">
           <div className="menuLinks">
             <Link href="/">Početna</Link>
-            <Link href="/">Otkup</Link>
-            <Link href="/">Zalog</Link>
+            <Link href="/otkup">Otkup</Link>
+            <Link href="/zalog">Zalog</Link>
             <MobileDropdown data={data} />
             <Link href="/novosti">Novosti</Link>
             <Link href="/kontakt">Kontakt</Link>

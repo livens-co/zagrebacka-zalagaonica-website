@@ -3,7 +3,7 @@ import './style.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export const revalidate = 3;
+export const revalidate = 3; 
 
 const CategoriesPage = async () => {
   const categories = await getCategories();
@@ -14,13 +14,13 @@ const CategoriesPage = async () => {
       <div className="categoriesList">
         {categories.map((item) => (
           <Link
-            href={`/ponuda/${item.categorySlug}`}
+            href={`/ponuda/${item?.categorySlug}`}
             key={item.id}
             className="categoryCard"
           >
-            <Image src={item.billboard?.imageUrl} alt={item.name} fill />
+            <Image src={item?.imageUrl} alt={item?.name} fill />
             <div className="imageOverlay" />
-            <h2>{item.name}</h2>
+            <h2>{item?.name}</h2>
           </Link>
         ))}
       </div>
