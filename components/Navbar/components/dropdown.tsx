@@ -31,6 +31,7 @@ const Dropdown: React.FC<DropdownProps> = ({ data, brands }) => {
           href="/ponuda"
           onMouseEnter={() => setIsOpen(true)}
           onClick={() => setIsOpen(true)}
+          
         >
           Ponuda
         </Link>
@@ -39,10 +40,10 @@ const Dropdown: React.FC<DropdownProps> = ({ data, brands }) => {
         className="menu"
         style={isOpen ? { display: 'flex' } : { display: 'none' }}
         onMouseLeave={() => setIsOpen(false)}
-      >
+      > 
         <div className="dropdownLinks">
           <div className="dropdownColumn">
-            <h3>Proizvodi</h3>
+            <h3>Kategorije</h3>
             {routes.map((route) => (
               <Link
                 key={route.href}
@@ -69,27 +70,27 @@ const Dropdown: React.FC<DropdownProps> = ({ data, brands }) => {
         </div>
         <div className="dropdownCollections">
           <div className="featuredCollection">
-            <div className="collectionImage">
+            <Link href='/ponuda/mobiteli?brandSlug=apple' className="collectionImage">
               <Image
                 priority
                 width={1000}
                 height={1000}
                 src="https://www.notebookcheck.biz/uploads/tx_nbc2/AppleiPhone14Pro__1__01.JPG"
-                alt="Collection"
+                alt="Apple iPhone"
               />
-            </div>
-            <p>Apple proizvodi</p>
+            </Link>
+            <p>Apple mobiteli</p>
           </div>
           <div className="featuredCollection">
-            <div className="collectionImage">
+            <Link href='/ponuda/satovi?brandSlug=rolex' className="collectionImage">
               <Image
                 priority
                 width={1000}
                 height={1000}
                 src="https://lidermedia.hr/images/slike/2022/01/04/o_393279_1024.jpg"
-                alt="Collection"
+                alt="Rolex"
               />
-            </div>
+            </Link>
             <p>Rolex Satovi</p>
           </div>
         </div>

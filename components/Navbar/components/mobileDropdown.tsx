@@ -37,7 +37,7 @@ const MobileDropdown: React.FC<MobileDropdownProps> = ({ data }) => {
       >
         {routes.map((route) => (
           <Link key={route.href} href={route.href}>
-            {route.label}
+            {route.label} 
           </Link>
         ))}
       </div>

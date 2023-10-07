@@ -47,36 +47,36 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({ data }) => {
         </div>
         <div className="innerContainer">
           <div className="menuLinks">
-            <Link href="/">Početna</Link>
-            <Link href="/otkup">Otkup</Link>
-            <Link href="/zalog">Zalog</Link>
+            <Link href="/" onClick={() => setIsOpen(!isOpen)}>Početna</Link>
+            <Link href="/otkup" onClick={() => setIsOpen(!isOpen)}>Otkup</Link>
+            <Link href="/zalog" onClick={() => setIsOpen(!isOpen)}>Zalog</Link>
             <MobileDropdown data={data} />
-            <Link href="/novosti">Novosti</Link>
-            <Link href="/kontakt">Kontakt</Link>
+            <Link href="/novosti" onClick={() => setIsOpen(!isOpen)}>Novosti</Link>
+            <Link href="/kontakt" onClick={() => setIsOpen(!isOpen)}>Kontakt</Link>
           </div>
           <div className="featuredCategories">
             <div className="featuredCategory">
-              <div className="categoryImage">
+              <Link href='/ponuda/mobiteli?brandSlug=apple' className="categoryImage" onClick={() => setIsOpen(!isOpen)}>
                 <Image
                   priority
                   height={400}
                   width={400}
                   src="https://www.notebookcheck.biz/uploads/tx_nbc2/AppleiPhone14Pro__1__01.JPG"
-                  alt="Category name"
+                  alt="Apple iPhone"
                 />
-              </div>
-              <p>Apple proizvodi</p>
+              </Link>
+              <p>Apple mobiteli</p>
             </div>
             <div className="featuredCategory">
-              <div className="categoryImage">
+              <Link href='/ponuda/satovi?brandSlug=rolex' className="categoryImage" onClick={() => setIsOpen(!isOpen)}>
                 <Image
                   priority
                   height={400}
                   width={400}
                   src="https://lidermedia.hr/images/slike/2022/01/04/o_393279_1024.jpg"
-                  alt="Category name"
+                  alt="Rolex"
                 />
-              </div>
+              </Link>
               <p>Rolex satovi</p>
             </div>
           </div>

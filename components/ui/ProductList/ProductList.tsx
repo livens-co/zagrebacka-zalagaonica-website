@@ -15,7 +15,7 @@ const ProductList: React.FC<ProductListProps> = ({ title, items }) => {
       {items.length === 0 && <NoResults />}
       {items
         .map((item) => <ProductCard key={item.id} data={item} />)
-        .slice(0, 4)}
+        .slice(0, 6)}
     </div>
   );
 };
