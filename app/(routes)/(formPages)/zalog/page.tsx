@@ -54,7 +54,7 @@ const ZalogPage = () => {
             </div>
             <div className="buttonAnimation" />
           </a>
-          <a href="mailto:" target="_blank">
+          <a href="mailto:info@zagrebacka-zalagaonica.hr" target="_blank">
             <span>Email</span>
             <div className="icon">
               <EmailIcon />
