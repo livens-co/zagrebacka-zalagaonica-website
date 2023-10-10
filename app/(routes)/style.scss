@@ -41,6 +41,7 @@
       // flex-direction: column;
       gap: 1.5rem;
       flex-wrap: wrap;
+      justify-content: center;
 
       a {
         width: 15rem;
@@ -209,6 +210,7 @@
 
     .title {
       width: 50%;
+
       h1 {
         font-weight: 400;
         text-transform: uppercase;
@@ -259,15 +261,20 @@
   }
 
   .paymentMethodsSection {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    // grid-template-columns: repeat(3, 1fr);
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
     padding: 0 5%;
     gap: 2rem;
     border-radius: 3px;
     height: fit-content;
 
     .gridItem {
+      width: 20rem;
+      height: 12rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -276,10 +283,74 @@
       padding: 2rem;
       gap: 1rem;
       background-color: var(--bg-light);
-      height: 100%;
 
       svg {
         font-size: 3rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .homePage {
+    .heroSection {
+      p {
+        width: 80%;
+      }
+    }
+
+    .aboutUsSection {
+      flex-direction: column;
+      gap: 2rem;
+
+      .title {
+        width: 100%;
+      }
+
+      .text {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .homePage {
+    gap: 2rem;
+
+    .heroSection {
+      p {
+        width: 95%;
+      }
+    }
+    .contact {
+    }
+
+    .aboutUsSection {
+      .title {
+        h1 {
+          font-size: 1.75rem;
+        }
+      }
+
+      .text {
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .featuredProducts {
+      padding: 0 5%;
+
+      h1 {
+        font-size: 1.75rem;
+      }
+    }
+
+    .featuredArticles {
+      .articlesTitle {
+        font-size: 1.75rem;
       }
     }
   }
