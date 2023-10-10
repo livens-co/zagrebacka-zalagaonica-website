@@ -8,15 +8,23 @@ import Link from 'next/link';
 
 interface MobileDropdownProps {
   data: Category[];
+  closeNavbar: () => void;
 }
 
-const MobileDropdown: React.FC<MobileDropdownProps> = ({ data }) => {
+const MobileDropdown: React.FC<MobileDropdownProps> = ({
+  data,
+  closeNavbar,
+}) => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const routes = data.map((route) => ({
     href: `/ponuda/${route.categorySlug}`,
     label: route.name,
   }));
+
+  const handleClick = () => {
+    closeNavbar();
+  };
 
   return (
     <div
@@ -36,8 +44,8 @@ const MobileDropdown: React.FC<MobileDropdownProps> = ({ data }) => {
         style={modalOpen ? { display: 'flex' } : { display: 'none' }}
       >
         {routes.map((route) => (
-          <Link key={route.href} href={route.href}>
-            {route.label} 
+          <Link key={route.href} href={route.href} onClick={handleClick}>
+            {route.label}
           </Link>
         ))}
       </div>

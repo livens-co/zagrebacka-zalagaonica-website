@@ -14,6 +14,10 @@ interface MobileNavbarProps {
 const MobileNavbar: React.FC<MobileNavbarProps> = ({ data }) => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const closeNavbar = ()=>{
+    setIsOpen(false);
+  }
+
   return (
     <>
       <div className="navbarMobile">
@@ -50,7 +54,7 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({ data }) => {
             <Link href="/" onClick={() => setIsOpen(!isOpen)}>Početna</Link>
             <Link href="/otkup" onClick={() => setIsOpen(!isOpen)}>Otkup</Link>
             <Link href="/zalog" onClick={() => setIsOpen(!isOpen)}>Zalog</Link>
-            <MobileDropdown data={data} />
+            <MobileDropdown data={data}  closeNavbar={closeNavbar}/>
             <Link href="/novosti" onClick={() => setIsOpen(!isOpen)}>Novosti</Link>
             <Link href="/kontakt" onClick={() => setIsOpen(!isOpen)}>Kontakt</Link>
           </div>

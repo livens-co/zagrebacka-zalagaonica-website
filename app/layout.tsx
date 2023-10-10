@@ -9,8 +9,9 @@ import './globals.css';
 const font = Work_Sans({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Zagrebacka zalagaonica',
-  description: 'Zagrebacka zalagaonica',
+  title: 'Zagrebačka zalagaonica',
+  description:
+    'Zagrebačka zalagaonica bavi se otkupom, zalogom i prodajom rabljene robe poput zlata, luksuznih satova, elektronike, te ostalih predmeta na upit.',
 };
 
 export default function RootLayout({
@@ -21,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="hr">
       <body className={font.className}>
-        <div className='mainLayout'>
+        <div className="mainLayout">
           <Navbar />
           {children}
           <Footer />
