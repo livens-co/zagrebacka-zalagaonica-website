@@ -57,3 +57,31 @@
     }
   }
 }
+
+@media screen and (max-width: 750px) {
+  .articleList {
+    grid-template-columns: 1fr;
+
+    .articleCard {
+      height: 23rem;
+
+      .articleCardImage{
+        height: 17rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .articleList {
+  
+
+    .articleCard {
+      height: 17rem;
+
+      .articleCardImage{
+        height: 11rem;
+      }
+    }
+  }
+}
