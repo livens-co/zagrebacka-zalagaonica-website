@@ -13,6 +13,7 @@
     font-size: 0.8rem;
     color: var(--color-gray);
     gap: 0.35rem;
+    flex-wrap: wrap;
   }
 
   .productContainer {
@@ -128,7 +129,11 @@
 
 @media screen and (max-width: 800px) {
   .productPage {
+    .productPageNav{
+      padding: 1rem 5%;
+    }
     .productContainer {
+      padding: 0 5%;
       flex-direction: column;
 
       .innerContainer {
