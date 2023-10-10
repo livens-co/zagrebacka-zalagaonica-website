@@ -5,36 +5,63 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import EmailIcon from '@mui/icons-material/Email';
+import Image from 'next/image';
 
 const OtkupPage = () => {
   return (
     <div className="formPage">
-      <h1>Otkup</h1>
-      <p className='pageDescription'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-        aliquam, in qui atque repellendus, ab quod assumenda suscipit a,
-        doloremque adipisci voluptates quis laboriosam vel amet quidem itaque
-        unde beatae.
-      </p>
-      <form>
-        <div className="input">
-          <label htmlFor="">Ime i prezime</label>
-          <input type="text" />
+      <div className="header">
+        <h1>Otkup</h1>
+        <p className="pageDescription">
+        Želite brzo i jednostavno prodati svoj predmet? Javite nam se!
+        </p>
+        <div className="image">
+          <Image
+            fill
+            src="https://www.notebookcheck.biz/uploads/tx_nbc2/AppleiPhone14Pro__1__01.JPG"
+            alt="Otkup"
+          />
+          <div className="overlay" />
         </div>
-        <div className="input">
-          <label htmlFor="">Email</label>
-          <input type="email" />
+      </div>
+
+      <div className="onlineProcjena">
+        <h2>Online procjena</h2>
+
+        <h3>Pri slanju upita molimo:</h3>
+        <div className="bubble">
+          <h4>1</h4>
+          <p>Jasno opišite predmet uz detaljne specifikacije.</p>
         </div>
-        <div className="input">
-          <label htmlFor="">Mobitel</label>
-          <input type="phone" />
+        <div className="bubble">
+          <h4>2</h4>
+          <p>Priložite što bistrije fotografije.</p>
         </div>
-        <div className="input">
-          <label htmlFor="">Upit</label>
-          <textarea rows={5} />
+        <div className="bubble">
+          <h4>3</h4>
+          <p>
+            Ukoliko posjedujete, priložite i račun/garanciju navedenog predmeta.
+          </p>
         </div>
-        <button className='formButton'>Pošalji</button>
-      </form>
+        <div className="contact">
+          <a href="tel:+" target="_blank">
+            <span>WhatsApp</span>
+            <div className="icon">
+              <WhatsAppIcon />
+            </div>
+            <div className="buttonAnimation" />
+          </a>
+          <a href="mailto:" target="_blank">
+            <span>Email</span>
+            <div className="icon">
+              <EmailIcon />
+            </div>
+            <div className="buttonAnimation" />
+          </a>
+        </div>
+      </div>
       <div className="faq">
         <h2>Često postavljana pitanja</h2>
 
@@ -50,10 +77,10 @@ const OtkupPage = () => {
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
-            <Typography>Pitanje</Typography>
+            <Typography>Kako funkcionira otkup?</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography>Odgovor</Typography>
+            <Typography>Nakon procjene Vašeg predmeta, donesite ga u našu zalagaonicu i dobivate dogovoreni iznos. Brzo, pouzdano i jednostavno!</Typography>
           </AccordionDetails>
         </Accordion>
         <Accordion
@@ -68,30 +95,13 @@ const OtkupPage = () => {
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
-            <Typography>Pitanje</Typography>
+            <Typography>Što otkupljujemo?</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography>Odgovor</Typography>
+            <Typography>Otkupljujemo zlato, dijamante, umjetnine, informatiku, mobitele, satove, automobile, motore i ostale predmete na upit.</Typography>
           </AccordionDetails>
         </Accordion>
-        <Accordion
-          style={{
-            backgroundColor: 'var(--bg-light)',
-            color: 'var(--primary)',
-            border: '0.05em solid var(--color-white-300)',
-          }}
-        >
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon style={{ color: 'var(--primary)' }} />}
-            aria-controls="panel1a-content"
-            id="panel1a-header"
-          >
-            <Typography>Pitanje</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography>Odgovor</Typography>
-          </AccordionDetails>
-        </Accordion>
+        
       </div>
     </div>
   );

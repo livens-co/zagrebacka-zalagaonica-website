@@ -42,8 +42,8 @@ const HomePage = async () => {
             na upit.
           </p>
           <div className="contact">
-            <a href="tel:+" target="_blank">
-              <span>099 2137 494</span>
+            <a href="tel:+385992173494" target="_blank">
+              <span>099 2173 494</span>
               <div className="icon">
                 <LocalPhoneRoundedIcon />
               </div>
@@ -88,7 +88,7 @@ const HomePage = async () => {
               <Image
                 fill
                 src="https://img.freepik.com/premium-photo/3d-rendering-shiny-gold-bars-stacked-black-background-with-copy-space-3-illustration_67155-13973.jpg"
-                alt="Otkup"
+                alt="Zalog"
               />
               <div className="overlay" />
             </div>

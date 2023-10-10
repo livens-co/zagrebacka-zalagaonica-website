@@ -29,7 +29,7 @@ const Footer = async () => {
           <div className="info">
             <h3>Zagrebačka zalagaonica</h3>
             <p>Krapinska 8, 10 000 Zagreb</p>
-            <p>099 2137 494</p>
+            <p>099 2173 494</p>
             <p>otkup@zagrebacka-zalagaonica.hr</p>
           </div>
           <div className="column">

@@ -38,13 +38,13 @@ const ContactPage = () => {
         </div>
         <div className="row">
           <h3>Radno vrijeme</h3>
-          <p>Pon-Pet - 08:00-20:00</p>
-          <p>Sub - 08:00-16:00</p>
+          <p>Pon-Pet - 09:00-19:00</p>
+          <p>Sub - 09:00-13:00</p>
           <p>Ned - Zatvoreno</p>
         </div>
         <div className="row">
           <h3>Telefon</h3>
-          <a href="tel:+">099 2137 494</a>
+          <a href="tel:+385992173494">099 2173 494</a>
         </div>
         <div className="row">
           <h3>Email</h3>
