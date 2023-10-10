@@ -31,10 +31,10 @@ const ContactPage = () => {
         <h2>Zagrebačka zalagaonica</h2>
         <div className="row">
           <h3>Adresa</h3>
-          <p>Krapinska ulica 8</p>
+          <p>Krapinska ulica 5</p>
           <p>10 000, Zagreb</p>
           <p>Hrvatska</p>
-          <Link href='/' target='_blank' className='addressButton'>Upute</Link>
+          <Link href='https://maps.app.goo.gl/yRoLdAPYfhZBsyEb7' target='_blank' className='addressButton'>Upute</Link>
         </div>
         <div className="row">
           <h3>Radno vrijeme</h3>
@@ -48,7 +48,7 @@ const ContactPage = () => {
         </div>
         <div className="row">
           <h3>Email</h3>
-          <a href="mailto:">otkup@zagrebacka-zalagaonica.hr</a>
+          <a href="mailto:info@zagrebacka-zalagaonica.hr">info@zagrebacka-zalagaonica.hr</a>
         </div>
       </div>
     </div>

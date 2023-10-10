@@ -51,7 +51,7 @@ const FooterMobile = async () => {
         </p>
         <p>
           Developed with 💙&#160;by
-          <Link href="//www.livens.co">&#160;livens</Link>
+          <Link href="//www.livens.co" target='_blank'>&#160;livens</Link>
         </p>
       </div>
     </div>

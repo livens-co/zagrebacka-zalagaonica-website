@@ -47,7 +47,7 @@ const ZalogPage = () => {
           </p>
         </div>
         <div className="contact">
-          <a href="tel:+" target="_blank">
+          <a href="https://wa.me/385992173494" target="_blank">
             <span>WhatsApp</span>
             <div className="icon">
               <WhatsAppIcon />

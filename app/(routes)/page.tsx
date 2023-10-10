@@ -49,14 +49,14 @@ const HomePage = async () => {
               </div>
               <div className="buttonAnimation" />
             </a>
-            <a href="mailto:" target="_blank">
+            <a href="mailto:info@zagrebacka-zalagaonica.hr" target="_blank">
               <span>Kontaktirajte nas</span>
               <div className="icon">
                 <MailRoundedIcon />
               </div>
               <div className="buttonAnimation" />
             </a>
-            <a href="/" target="_blank">
+            <a href="https://maps.app.goo.gl/yRoLdAPYfhZBsyEb7" target="_blank">
               <span>Krapinska ulica 5</span>
               <div className="icon">
                 <FmdGoodRoundedIcon />
