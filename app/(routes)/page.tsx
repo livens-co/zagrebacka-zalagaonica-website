@@ -145,7 +145,9 @@ const HomePage = async () => {
       </div>
 
       {/* SLOGAN */}
-      <h1>SLOGAN</h1>
+      <div className="slogan">
+        <h1>Zagrebačka zalagaonica - vaš put prema brzim financijskim rješenjima.</h1>
+      </div>
 
       {/* NOVOSTI */}
       <div className="featuredArticles">

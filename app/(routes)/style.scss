@@ -260,6 +260,19 @@
     }
   }
 
+  .slogan {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      font-weight: 300;
+      width: 60%;
+      text-align: center;
+    }
+  }
+
   .paymentMethodsSection {
     display: flex;
     // grid-template-columns: repeat(3, 1fr);
@@ -299,6 +312,12 @@
       }
     }
 
+    .slogan {
+      h1{
+        width: 80%;
+      }
+    }
+
     .aboutUsSection {
       flex-direction: column;
       gap: 2rem;
@@ -327,6 +346,14 @@
     }
    .servicesSection{
     gap: 2rem;
+   }
+
+   .slogan {
+    padding: 2rem 0;
+    h1{
+      width: 90%;
+      font-size: 1.75rem;
+    }
    }
 
     .aboutUsSection {
