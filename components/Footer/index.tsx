@@ -48,11 +48,11 @@ const Footer = async () => {
         <div className="social">
           <h2>Pratite nas:</h2>
           <div className="links">
-            <a href="/" target='_blank'>
+            <a href="https://www.instagram.com/zagrebacka_zalagaonica/" target='_blank'>
               <InstagramIcon />
             </a>
 
-            <a href="/" target='_blank'>
+            <a href="https://www.njuskalo.hr/trgovina/ZagrebackaZalagaonica" target='_blank'>
               <PetsRoundedIcon />
             </a>
           </div>

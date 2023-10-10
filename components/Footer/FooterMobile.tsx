@@ -28,11 +28,11 @@ const FooterMobile = async () => {
       <div className="social">
         <h3>Pratite nas:</h3>
         <div className="socialLinks">
-          <a href="/">
+          <a href="https://www.instagram.com/zagrebacka_zalagaonica/">
             <InstagramIcon />
           </a>
 
-          <a href="/">
+          <a href="https://www.njuskalo.hr/trgovina/ZagrebackaZalagaonica">
             <PetsRoundedIcon />
           </a>
         </div>
