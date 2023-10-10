@@ -62,3 +62,14 @@
     }
   }
 }
+
+@media screen and (max-width: 900px){
+  .categoriesPage {
+    padding: 2rem 5% 4rem;
+    gap: 2rem;
+    
+    .categoriesList {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

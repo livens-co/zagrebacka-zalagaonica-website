@@ -14,6 +14,31 @@
       flex-direction: column;
       gap: 1rem;
 
+      .input {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+
+        label {
+          font-size: 0.9rem;
+          letter-spacing: 0.05em;
+          color: var(--color-gray);
+        }
+
+        input,
+        textarea {
+          border: 0.05em solid var(--color-white-300);
+          background-color: var(--bg-light);
+          padding: 0.5rem;
+          color: var(--primary);
+          font-size: 1rem;
+          font-family: inherit;
+          border-radius: var(--radius);
+          resize: none;
+        }
+      }
+
       .button {
         width: 100%;
         display: flex;
@@ -79,7 +104,6 @@
   flex-direction: column;
   align-items: center;
   gap: 3rem;
-  
 
   .header {
     display: flex;
@@ -90,24 +114,24 @@
     height: 20rem;
     position: relative;
     border-radius: var(--radius);
-  overflow: hidden;
+    overflow: hidden;
 
     h1 {
       z-index: 10;
-       font-weight: 400;
-       text-align: center;
-       text-transform: uppercase;
-       color: var(--primary);
-       margin-bottom: 1rem;
-     }
- 
-     .pageDescription {
-       z-index: 10;
-       width: 60%;
-       text-align: center;
-       font-size: 1.25rem;
-       font-weight: 300;
-     }
+      font-weight: 400;
+      text-align: center;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .pageDescription {
+      z-index: 10;
+      width: 60%;
+      text-align: center;
+      font-size: 1.25rem;
+      font-weight: 300;
+    }
 
     .image {
       width: 100%;
@@ -123,7 +147,6 @@
       }
 
       .overlay {
-       
         height: 100%;
         width: 100%;
         position: absolute;
@@ -131,13 +154,8 @@
         left: 0;
         background-color: rgba(0, 0, 0, 0.5);
       }
-
     }
-   
-
   }
-
-
 
   .onlineProcjena {
     width: 100%;
@@ -302,27 +320,43 @@
   }
 }
 
-.input {
-  display: flex;
+@media screen and (max-width: 750px){
+.contactPage{
+  padding: 2rem 5% 4rem;
   flex-direction: column;
-  width: 100%;
-  gap: 0.5rem;
+  gap: 2rem;
 
-  label {
-    font-size: 0.9rem;
-    letter-spacing: 0.05em;
-    color: var(--color-gray);
+  .contactContainer{
+    form {
+      width: 100%;
+    }
   }
+}
+}
 
-  input,
-  textarea {
-    border: 0.05em solid var(--color-white-300);
-    background-color: var(--bg-light);
-    padding: 0.5rem;
-    color: var(--primary);
-    font-size: 1rem;
-    font-family: inherit;
-    border-radius: var(--radius);
-    resize: none;
+@media screen and (max-width: 600px) {
+  .formPage {
+    gap: 2rem;
+    padding: 2rem 5% 4rem;
+
+    .header {
+      .pageDescription {
+        width: 80%;
+      }
+    }
+
+    .onlineProcjena{
+      .bubble{
+        width: 100%;
+
+        p{
+         width: 70%;
+        }
+      }
+    }
+
+    .faq {
+      width: 100%;
+    }
   }
 }
