@@ -1,0 +1,21 @@
+.successPage {
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  h1 {
+    font-weight: 400;
+  }
+
+  a{
+    background-color: var(--secondary);
+    color: var(--primary);
+    padding: 0.5rem 1.75rem;
+    border-radius: var(--radius);
+    text-transform: uppercase;
+  }
+}
