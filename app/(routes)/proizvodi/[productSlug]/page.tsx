@@ -54,7 +54,7 @@ const ProductPage: React.FC<ProductPageProps> = async ({ params }) => {
           <div className="description">
             <Markdown>{product?.description}</Markdown>
           </div>
-          <h3>Načini plaćanja: {product?.paymentMethod}</h3>
+          <h3>Načini plaćanja:</h3><Markdown>{product?.paymentMethod}</Markdown>
           <div className="contactButton">
             <a href="tel:+385992173494">Nazovite nas</a>
           </div>

@@ -170,6 +170,14 @@
         font-size: 1.75rem;
         text-transform: uppercase;
         letter-spacing: 1px;
+        width: fit-content;
+        display: flex;
+        align-items: center;
+
+        svg {
+          font-size: 1.75rem;
+          margin-left: 0.5rem;
+        }
 
         &::after {
           content: '';
@@ -313,7 +321,7 @@
     }
 
     .slogan {
-      h1{
+      h1 {
         width: 80%;
       }
     }
@@ -333,8 +341,6 @@
   }
 }
 
-
-
 @media screen and (max-width: 500px) {
   .homePage {
     gap: 2rem;
@@ -344,17 +350,17 @@
         width: 95%;
       }
     }
-   .servicesSection{
-    gap: 2rem;
-   }
-
-   .slogan {
-    padding: 2rem 0;
-    h1{
-      width: 90%;
-      font-size: 1.75rem;
+    .servicesSection {
+      gap: 2rem;
     }
-   }
+
+    .slogan {
+      padding: 2rem 0;
+      h1 {
+        width: 90%;
+        font-size: 1.75rem;
+      }
+    }
 
     .aboutUsSection {
       .title {

@@ -10,7 +10,7 @@ const PrivacyPage = () => {
         </p>
         <br />
         <p>
-          FIRMA upravlja web stranicom zagrebacka-zalagaonica.hr (u daljnjem
+          Emian Solutions d.o.o. upravlja web stranicom zagrebacka-zalagaonica.hr (u daljnjem
           tekstu &quot;Usluga&quot;).
         </p>
         <p>
@@ -83,7 +83,7 @@ const PrivacyPage = () => {
         </ul>
         <h2>Korištenje podataka</h2>
         <p>
-          FIRMA koristi prikupljene podatke u razne svrhe,
+          Emian Solutions d.o.o. koristi prikupljene podatke u razne svrhe,
           uključujući:
         </p>
         <ul>
@@ -118,7 +118,7 @@ const PrivacyPage = () => {
           informacija, predstavlja vaš pristanak na takav prijenos.
         </p>
         <p>
-          FIRMA poduzet će sve razumne korake kako bi osigurao
+          Emian Solutions d.o.o. poduzet će sve razumne korake kako bi osigurao
           sigurnu obradu vaših podataka sukladno ovoj Politici privatnosti, te
           neće biti prijenosa vaših Osobnih podataka organizaciji ili zemlji bez
           adekvatnih kontrola uključujući sigurnost vaših podataka i ostalih
@@ -127,12 +127,12 @@ const PrivacyPage = () => {
         <h2>Dijeljenje podataka</h2>
         <h3>Zakonski zahtjevi</h3>
         <p>
-          FIRMA može otkriti vaše Osobne podatke u vjeri da je takva
+          Emian Solutions d.o.o. može otkriti vaše Osobne podatke u vjeri da je takva
           radnja potrebna kako bi:
         </p>
         <ul>
           <li>Ispunili zakonsku obvezu</li>
-          <li>Zaštitili i branili prava ili imovinu FIRMA</li>
+          <li>Zaštitili i branili prava ili imovinu Emian Solutions d.o.o.</li>
           <li>
             Spriječili ili istražili moguće nepravilnosti u vezi s Uslugom
           </li>
@@ -211,11 +211,11 @@ const PrivacyPage = () => {
           nas kontaktirajte putem e-pošte na adresu: info@zagrebacka-zalagaonica.hr.
         </p>
         <br />
-        <h3>FIRMA</h3>
-        <p>Adresa</p>
-        <p>Društvo je upisano u sudski registar trgovačkog suda u Zagrebu, pod brojem matičnim brojem 081383879, OIB 93883148474. Temeljni kapital društva iznosi 2.654,46 EUR i uplaćen je u cijelosti u novcu.</p>
-        <p>Erste&Steiermärkische Bank d.d., Jadranski trg 3A, 51000 Rijeka, HR7524020061101040052</p>
-        <p>Član društva i direktor: </p>
+        <h3>Emian Solutions d.o.o.</h3>
+        <p>Ulica Ede Murtića 2A, Zagreb 10 000, Hrvatska</p>
+        <p>Društvo je upisano u sudski registar trgovačkog suda u Zagrebu, pod brojem matičnim brojem 081486709, OIB 83511646702. Temeljni kapital društva iznosi 2.500,00 EUR i uplaćen je u cijelosti u novcu.</p>
+        {/* <p>Erste&Steiermärkische Bank d.d., Jadranski trg 3A, 51000 Rijeka, HR7524020061101040052</p> */}
+        <p>Član društva i direktor: Jan Branko Vuletić</p>
       </section>
     </div>
   );

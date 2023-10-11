@@ -1,31 +1,12 @@
 import Link from 'next/link'
 import '../style.scss'
+import ContactForm from '@/components/ContactForm/ContactForm'
 
 const ContactPage = () => {
   return (
     <div className='contactPage'>
       <div className="contactContainer">
-        <form>
-          <div className="input">
-            <label htmlFor="">Ime i prezime*</label>
-            <input type="text" />
-          </div>
-          <div className="input">
-            <label htmlFor="">Email*</label>
-            <input type="email" />
-          </div>
-          <div className="input">
-            <label htmlFor="">Mobitel*</label>
-            <input type="phone" />
-          </div>
-          <div className="input">
-            <label htmlFor="">Poruka*</label>
-            <textarea name="" id="" rows={4}/>
-          </div>
-          <div className="button">
-            <button type="submit">Pošalji</button>
-          </div>
-        </form>
+        <ContactForm/>
       </div>
       <div className="contactContainer">
         <h2>Zagrebačka zalagaonica</h2>
@@ -34,7 +15,7 @@ const ContactPage = () => {
           <p>Krapinska ulica 5</p>
           <p>10 000, Zagreb</p>
           <p>Hrvatska</p>
-          <Link href='https://maps.app.goo.gl/yRoLdAPYfhZBsyEb7' target='_blank' className='addressButton'>Upute</Link>
+          <Link href='https://maps.app.goo.gl/zzsJvpo92Fsn8LscA' target='_blank' className='addressButton'>Upute</Link>
         </div>
         <div className="row">
           <h3>Radno vrijeme</h3>
