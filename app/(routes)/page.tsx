@@ -16,6 +16,8 @@ import PaymentIcon from '@mui/icons-material/Payment';
 import VerifiedIcon from '@mui/icons-material/Verified';
 import HandshakeIcon from '@mui/icons-material/Handshake';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import { useEffect, useState } from 'react';
+import { Blog, Product } from '@/types';
 
 export const revalidate = 3;
 
@@ -81,7 +83,7 @@ const HomePage = async () => {
               <div className="overlay" />
             </div>
             <Link href="/otkup" className="serviceTitle">
-              Otkup <ArrowForwardIcon/>
+              Otkup <ArrowForwardIcon />
             </Link>
           </div>
           <div className="service">
@@ -94,7 +96,7 @@ const HomePage = async () => {
               <div className="overlay" />
             </div>
             <Link href="/zalog" className="serviceTitle">
-              Zalog <ArrowForwardIcon/>
+              Zalog <ArrowForwardIcon />
             </Link>
           </div>
           <div className="service">
@@ -107,7 +109,7 @@ const HomePage = async () => {
               <div className="overlay" />
             </div>
             <Link href="/ponuda" className="serviceTitle">
-              Prodaja <ArrowForwardIcon/>
+              Prodaja <ArrowForwardIcon />
             </Link>
           </div>
         </div>
@@ -147,7 +149,9 @@ const HomePage = async () => {
 
       {/* SLOGAN */}
       <div className="slogan">
-        <h1>Zagrebačka zalagaonica - vaš put prema brzim financijskim rješenjima.</h1>
+        <h1>
+          Zagrebačka zalagaonica - vaš put prema brzim financijskim rješenjima.
+        </h1>
       </div>
 
       {/* NOVOSTI */}

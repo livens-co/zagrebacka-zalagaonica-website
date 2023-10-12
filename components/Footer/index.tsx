@@ -30,7 +30,7 @@ const Footer = async () => {
             <h3>Zagrebačka zalagaonica</h3>
             <p>Krapinska 5, 10 000 Zagreb</p>
             <p>099 2173 494</p>
-            <p>otkup@zagrebacka-zalagaonica.hr</p>
+            <p>info@zagrebacka-zalagaonica.hr</p>
           </div>
           <div className="column">
             <h3>Korisni linkovi</h3>
