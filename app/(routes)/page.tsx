@@ -1,23 +1,23 @@
-import getProducts from '@/actions/get-products';
-import ProductList from '@/components/ui/ProductList/ProductList';
-import Container from '@/components/ui/container';
-import Image from 'next/image';
+import getProducts from "@/actions/get-products";
+import ProductList from "@/components/ui/ProductList/ProductList";
+import Container from "@/components/ui/container";
+import Image from "next/image";
 
-import LocalPhoneRoundedIcon from '@mui/icons-material/LocalPhoneRounded';
-import MailRoundedIcon from '@mui/icons-material/MailRounded';
-import FmdGoodRoundedIcon from '@mui/icons-material/FmdGoodRounded';
+import LocalPhoneRoundedIcon from "@mui/icons-material/LocalPhoneRounded";
+import MailRoundedIcon from "@mui/icons-material/MailRounded";
+import FmdGoodRoundedIcon from "@mui/icons-material/FmdGoodRounded";
 
-import './style.scss';
-import Link from 'next/link';
-import ArticleList from '@/components/ui/ArticleList/ArticleList';
-import getBlogs from '@/actions/get-blogs';
+import "./style.scss";
+import Link from "next/link";
+import ArticleList from "@/components/ui/ArticleList/ArticleList";
+import getBlogs from "@/actions/get-blogs";
 
-import PaymentIcon from '@mui/icons-material/Payment';
-import VerifiedIcon from '@mui/icons-material/Verified';
-import HandshakeIcon from '@mui/icons-material/Handshake';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import { useEffect, useState } from 'react';
-import { Blog, Product } from '@/types';
+import PaymentIcon from "@mui/icons-material/Payment";
+import VerifiedIcon from "@mui/icons-material/Verified";
+import HandshakeIcon from "@mui/icons-material/Handshake";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import { useEffect, useState } from "react";
+import { Blog, Product } from "@/types";
 
 export const revalidate = 3;
 
@@ -28,8 +28,12 @@ const HomePage = async () => {
   return (
     <div className="homePage">
       {/* HERO SECTION */}
-      <Container>
+      {/* <Container> */}
         <div className="heroSection">
+          <video autoPlay muted loop src="/2164973-preview.mp4" playsInline>
+            <source src="/2164973-preview.mp4" type="video/mp4" />
+          </video>
+          <div className="videoOverlay"></div>
           <div className="heroImage">
             <Image
               priority
@@ -68,7 +72,7 @@ const HomePage = async () => {
             </a>
           </div>
         </div>
-      </Container>
+      {/* </Container> */}
 
       {/* OTKUP ZALOG PRODAJA */}
       <Container>
