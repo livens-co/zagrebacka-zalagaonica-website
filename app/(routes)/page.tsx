@@ -1,3 +1,5 @@
+'use client'
+
 import getProducts from "@/actions/get-products";
 import ProductList from "@/components/ui/ProductList/ProductList";
 import Container from "@/components/ui/container";
@@ -21,9 +23,38 @@ import { Blog, Product } from "@/types";
 
 export const revalidate = 3;
 
-const HomePage = async () => {
-  const products = await getProducts({ isFeatured: true });
-  const articles = await getBlogs();
+const HomePage =  () => {
+  // const products = await getProducts({ isFeatured: true });
+  // const articles = await getBlogs();
+  const [products, setProducts] = useState([]);
+  const [articles, setArticles] = useState([]);
+
+  useEffect(() => {
+    // Fetch products and update state
+    const fetchProducts = async () => {
+      try {
+        const response = await getProducts({ isFeatured: true });
+        setProducts(products);
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      }
+    };
+
+    // Fetch articles and update state
+    const fetchArticles = async () => {
+      try {
+        const response = await getBlogs();
+        setArticles(articles);
+      } catch (error) {
+        console.error("Error fetching articles:", error);
+      }
+    };
+
+    fetchProducts();
+    fetchArticles();
+  }, []);
+
+  console.log(products)
 
   return (
     <div className="homePage">
