@@ -419,20 +419,21 @@
 
 @media screen and (max-width: 500px) {
   .homePage {
-  
-
     .heroSection {
+      video {
+        object-position: 40%;
+      }
+
       .heroContent {
         p {
           width: 95%;
         }
 
-        .heroImage{
+        .heroImage {
           width: 90%;
         }
       }
     }
-    
 
     .slogan {
       padding: 2rem 0;
@@ -481,5 +482,3 @@
   object-fit: cover;
   z-index: -1;
 }
-
-
