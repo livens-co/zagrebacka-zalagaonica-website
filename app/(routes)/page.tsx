@@ -20,13 +20,12 @@ import HandshakeIcon from "@mui/icons-material/Handshake";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { useEffect, useState } from "react";
 
-
 // export const revalidate = 3;
 
 const HomePage = () => {
   // const products = await getProducts({ isFeatured: true });
   // const articles = await getBlogs();
-  const [offset, setOffset] = useState(0);
+
   const [products, setProducts] = useState();
   const [articles, setArticles] = useState();
 
@@ -47,77 +46,58 @@ const HomePage = () => {
       setArticles(articles);
     };
     datafetch();
-
-    function handleScroll() {
-      setOffset(window.pageYOffset);
-    }
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
   }, []);
-
+  console.log(products);
   return (
     <div className="homePage">
       {/* HERO SECTION */}
 
       <div className="heroSection">
-        {/* <div
-          className="parallax"
-          style={{
-            transform: `translateY(${offset * 0.4}px)`,
-          }}
-        > */}
-          <video autoPlay muted loop src="/2164973-preview.mp4" playsInline>
-            <source src="/2164973-preview.mp4" type="video/mp4" />
-          </video>
-          <div className="videoOverlay"></div>
-          <div className="heroContent">
-            <div className="heroImage">
-              <Image
-                priority
-                src="/assets/logo_white.png"
-                height={456}
-                width={1050}
-                alt="Zagrebačka zalagaonica"
-              />
-            </div>
-            <p>
-              Zagrebačka zalagaonica bavi se otkupom, zalogom i prodajom
-              rabljene robe poput zlata, luksuznih satova, elektronike, te
-              ostalih predmeta na upit.
-            </p>
-            <div className="contact">
-              <a href="tel:+385992173494" target="_blank">
-                <span>099 2173 494</span>
-                <div className="icon">
-                  <LocalPhoneRoundedIcon />
-                </div>
-                <div className="buttonAnimation" />
-              </a>
-              <a href="mailto:info@zagrebacka-zalagaonica.hr" target="_blank">
-                <span>Kontaktirajte nas</span>
-                <div className="icon">
-                  <MailRoundedIcon />
-                </div>
-                <div className="buttonAnimation" />
-              </a>
-              <a
-                href="https://maps.app.goo.gl/zzsJvpo92Fsn8LscA"
-                target="_blank"
-              >
-                <span>Krapinska ulica 5</span>
-                <div className="icon">
-                  <FmdGoodRoundedIcon />
-                </div>
-                <div className="buttonAnimation" />
-              </a>
-            </div>
-          </div>
-        {/* </div> */}
         
+        <video autoPlay muted loop src="/2164973-preview.mp4" playsInline>
+          <source src="/2164973-preview.mp4" type="video/mp4" />
+        </video>
+        <div className="videoOverlay"></div>
+        
+          <div className="heroImage">
+            <Image
+              priority
+              src="/assets/logo_white.png"
+              height={456}
+              width={1050}
+              alt="Zagrebačka zalagaonica"
+            />
+          </div>
+          <p>
+            Zagrebačka zalagaonica bavi se otkupom, zalogom i prodajom rabljene
+            robe poput zlata, luksuznih satova, elektronike, te ostalih predmeta
+            na upit.
+          </p>
+          <div className="contact">
+            <a href="tel:+385992173494" target="_blank">
+              <span>099 2173 494</span>
+              <div className="icon">
+                <LocalPhoneRoundedIcon />
+              </div>
+              <div className="buttonAnimation" />
+            </a>
+            <a href="mailto:info@zagrebacka-zalagaonica.hr" target="_blank">
+              <span>Kontaktirajte nas</span>
+              <div className="icon">
+                <MailRoundedIcon />
+              </div>
+              <div className="buttonAnimation" />
+            </a>
+            <a href="https://maps.app.goo.gl/zzsJvpo92Fsn8LscA" target="_blank">
+              <span>Krapinska ulica 5</span>
+              <div className="icon">
+                <FmdGoodRoundedIcon />
+              </div>
+              <div className="buttonAnimation" />
+            </a>
+          </div>
+      
+      
       </div>
 
       {/* OTKUP ZALOG PRODAJA */}
