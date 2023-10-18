@@ -54,8 +54,8 @@ const HomePage = () => {
 
       <div className="heroSection">
         
-        <video autoPlay muted loop src="/2164973-preview.mp4" playsInline>
-          <source src="/2164973-preview.mp4" type="video/mp4" />
+        <video autoPlay muted loop src="/intro.mp4" playsInline>
+          <source src="/intro.mp4" type="video/mp4" />
         </video>
         <div className="videoOverlay"></div>
         
