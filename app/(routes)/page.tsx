@@ -37,7 +37,8 @@ function Section({ children }: SectionProps) {
         style={{
           transform: isInView ? "none" : "translateX(-100vw)",
           opacity: isInView ? 1 : 0,
-          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.7s ",
+          transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 0.7s ",
+          // transition: "all 1s ease-in 0.7s ",
         }}
         // className="services-container"
       >
@@ -166,10 +167,10 @@ const HomePage = () => {
             </Link>
           </div>
         </div>
-      {/* </Section> */}
+      </Section>
       {/* </Container> */}
       {/* O NAMA */}
-      {/* <Section> */}
+      <Section>
         <div className="aboutUsSection">
           <div className="title">
             <h1>O nama</h1>
