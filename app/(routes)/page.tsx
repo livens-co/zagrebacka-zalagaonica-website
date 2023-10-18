@@ -67,7 +67,7 @@ const HomePage = () => {
         <div
           className="parallax"
           style={{
-            transform: `translateY(${offset * 0.6}px)`,
+            transform: `translateY(${offset * 0.4}px)`,
           }}
         >
           <video autoPlay muted loop src="/2164973-preview.mp4" playsInline>
