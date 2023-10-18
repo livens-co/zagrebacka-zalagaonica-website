@@ -64,12 +64,12 @@ const HomePage = () => {
       {/* HERO SECTION */}
 
       <div className="heroSection">
-        <div
+        {/* <div
           className="parallax"
           style={{
             transform: `translateY(${offset * 0.4}px)`,
           }}
-        >
+        > */}
           <video autoPlay muted loop src="/2164973-preview.mp4" playsInline>
             <source src="/2164973-preview.mp4" type="video/mp4" />
           </video>
@@ -116,7 +116,7 @@ const HomePage = () => {
               </a>
             </div>
           </div>
-        </div>
+        {/* </div> */}
         
       </div>
 
