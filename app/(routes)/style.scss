@@ -420,11 +420,13 @@
 @media screen and (max-width: 500px) {
   .homePage {
     .heroSection {
+      height: 45rem;
       video {
         object-position: 40%;
       }
 
       .heroContent {
+        top: 50%;
         p {
           width: 95%;
         }
