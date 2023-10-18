@@ -2,27 +2,38 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: var(--gap);
+  // gap: var(--gap);
   padding-bottom: 4rem;
+  background-color: var(--bg);
+  position: relative;
 
   .heroSection {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-    padding: 4rem 0;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    // gap: 3rem;
+    // padding: 4rem 0;
     position: relative;
+    // min-height: 100vh;
+    height: 100vh;
+    z-index: 0;
 
     video {
-      position: absolute;
+      // position: absolute;
       top: -2rem;
-      left: 0;
-      width: 100%;
+      // left: 0;
+      // width: 100%;
       height: calc(100% + 2rem);
-      object-fit: cover;
+      // object-fit: cover;
       z-index: -1;
+      position: absolute;
+      // height: 100%;
+      width: 100%;
+      object-fit: cover;
+      // bottom: 0;
+      left: 0;
     }
 
     .videoOverlay {
@@ -31,112 +42,142 @@
       left: 0;
       width: 100%;
       height: calc(100% + 2rem);
-      background-color: rgba(0, 0, 0, 0.5);
-      z-index: 0;
+      background: rgb(12, 15, 10);
+      background: -moz-linear-gradient(
+        180deg,
+        rgba(12, 15, 10, 0.5970982142857143) 18%,
+        rgba(12, 15, 10, 0.7035407913165266) 85%
+      );
+      background: -webkit-linear-gradient(
+        180deg,
+        rgba(12, 15, 10, 0.5970982142857143) 18%,
+        rgba(12, 15, 10, 0.7035407913165266) 85%
+      );
+      background: linear-gradient(
+        180deg,
+        rgba(12, 15, 10, 0.5970982142857143) 18%,
+        rgba(12, 15, 10, 0.7035407913165266) 85%
+      );
+      z-index: 1;
     }
 
-    .heroImage {
-      display: flex;
-      justify-content: center;
-      height: 16rem;
-      z-index: 1;
+    .heroContent {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       width: 100%;
-
-      img {
-        height: 100%;
-        width: 100%;
-        object-fit: contain;
-      }
-    }
-
-    p {
-      width: 60%;
-      text-align: center;
-      font-weight: 400;
-      color: var(--primary);
-      font-size: 1.15rem;
-      z-index: 1;
-    }
-
-    .contact {
       display: flex;
-      // flex-direction: column;
-      gap: 1.5rem;
-      flex-wrap: wrap;
+      flex-direction: column;
       justify-content: center;
-      z-index: 1;
+      align-items: center;
+      z-index: 6;
+      gap: 3rem;
 
-      a {
-        width: 15rem;
-        position: relative;
-        padding: 0.75rem 1rem 0.75rem 1.5rem;
-        height: 3rem;
-        color: var(--primary);
-        font-weight: 600;
-        border-radius: 2rem;
+      .heroImage {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background: rgb(255, 98, 17);
-        background: -moz-linear-gradient(
-          330deg,
-          rgba(255, 98, 17, 1) 33%,
-          rgba(255, 164, 41, 1) 100%
-        );
-        background: -webkit-linear-gradient(
-          330deg,
-          rgba(255, 98, 17, 1) 33%,
-          rgba(255, 164, 41, 1) 100%
-        );
-        background: linear-gradient(
-          330deg,
-          rgba(255, 98, 17, 1) 33%,
-          rgba(255, 164, 41, 1) 100%
-        );
+        justify-content: center;
+        height: 14rem;
+        // z-index: 1;
+        width: 100%;
 
-        span {
-          transition: all 300ms ease;
-          transition-delay: 150ms;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: contain;
         }
+      }
 
-        .icon {
-          // background-color: var(--primary);
-          height: 2rem;
-          width: 2rem;
+      p {
+        width: 60%;
+        text-align: center;
+        font-weight: 400;
+        color: var(--primary);
+        font-size: 1.15rem;
+        // z-index: 1;
+      }
+
+      .contact {
+        display: flex;
+        // flex-direction: column;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        // z-index: 600;
+
+        a {
+          // z-index: inherit;
+          width: 15rem;
+          position: relative;
+          padding: 0.75rem 1rem 0.75rem 1.5rem;
+          height: 3rem;
+          color: var(--primary);
+          font-weight: 600;
+          border-radius: 2rem;
           display: flex;
           align-items: center;
-          justify-content: center;
-          border-radius: 50%;
-          margin-left: 1rem;
-          z-index: 2;
+          justify-content: space-between;
+          background: rgb(255, 98, 17);
+          background: -moz-linear-gradient(
+            330deg,
+            rgba(255, 98, 17, 1) 33%,
+            rgba(255, 164, 41, 1) 100%
+          );
+          background: -webkit-linear-gradient(
+            330deg,
+            rgba(255, 98, 17, 1) 33%,
+            rgba(255, 164, 41, 1) 100%
+          );
+          background: linear-gradient(
+            330deg,
+            rgba(255, 98, 17, 1) 33%,
+            rgba(255, 164, 41, 1) 100%
+          );
 
-          svg {
-            font-size: 1.25rem;
-            color: var(--secondary);
-          }
-        }
-
-        .buttonAnimation {
-          position: absolute;
-          right: 1rem;
-          height: 2rem;
-          width: 2rem;
-          background-color: var(--primary);
-          border-radius: 2rem;
-          // overflow: hidden;
-          transition: width 300ms ease-out;
-        }
-
-        &:hover {
           span {
-            margin-left: 0.5rem;
+            transition: all 300ms ease;
+            transition-delay: 150ms;
+          }
 
-            color: var(--secondary);
-            z-index: 5;
+          .icon {
+            // background-color: var(--primary);
+            height: 2rem;
+            width: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-left: 1rem;
+            z-index: 2;
+
+            svg {
+              font-size: 1.25rem;
+              color: var(--secondary);
+            }
           }
 
           .buttonAnimation {
-            width: calc(100% - 2rem);
+            position: absolute;
+            right: 1rem;
+            height: 2rem;
+            width: 2rem;
+            background-color: var(--primary);
+            border-radius: 2rem;
+            // overflow: hidden;
+            transition: width 300ms ease-out;
+          }
+
+          &:hover {
+            span {
+              margin-left: 0.5rem;
+
+              color: var(--secondary);
+              z-index: 5;
+            }
+
+            .buttonAnimation {
+              width: calc(100% - 2rem);
+            }
           }
         }
       }
@@ -150,6 +191,9 @@
     flex-wrap: wrap;
     gap: var(--gap);
     position: relative;
+    // z-index: 3;
+    background-color: var(--bg);
+    padding: 6rem 0 4rem;
 
     .service {
       width: 20rem;
@@ -237,7 +281,9 @@
   .aboutUsSection {
     // height: 30rem;
     display: flex;
-    padding: 2rem 5%;
+    padding: 2rem 5% 6rem;
+    z-index: 5;
+    background-color: var(--bg);
 
     .title {
       width: 50%;
@@ -265,9 +311,11 @@
 
   .featuredProducts {
     width: 100%;
-    padding: 2rem 5%;
+    padding: 2rem 5% 6rem;
     display: flex;
     flex-direction: column;
+    z-index: 5;
+    background-color: var(--bg);
 
     h1 {
       font-weight: 400;
@@ -278,9 +326,11 @@
   }
 
   .featuredArticles {
-    padding: 2rem 5%;
+    padding: 2rem 5% 6rem;
     display: flex;
     flex-direction: column;
+    z-index: 5;
+    background-color: var(--bg);
 
     .articlesTitle {
       font-weight: 400;
@@ -296,6 +346,7 @@
     width: 100%;
     justify-content: center;
     align-items: center;
+    padding: 4rem 0;
 
     h1 {
       font-weight: 300;
@@ -338,8 +389,10 @@
 @media screen and (max-width: 900px) {
   .homePage {
     .heroSection {
-      p {
-        width: 80%;
+      .heroContent {
+        p {
+          width: 80%;
+        }
       }
     }
 
@@ -366,16 +419,20 @@
 
 @media screen and (max-width: 500px) {
   .homePage {
-    gap: 2rem;
+  
 
     .heroSection {
-      p {
-        width: 95%;
+      .heroContent {
+        p {
+          width: 95%;
+        }
+
+        .heroImage{
+          width: 90%;
+        }
       }
     }
-    .servicesSection {
-      gap: 2rem;
-    }
+    
 
     .slogan {
       padding: 2rem 0;
@@ -414,3 +471,15 @@
     }
   }
 }
+
+.parallax {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+
