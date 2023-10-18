@@ -38,9 +38,9 @@ function Section({ children }: SectionProps) {
           transform: isInView ? "none" : "translateX(-100vw)",
           opacity: isInView ? 1 : 0,
           transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 0.7s ",
-          // transition: "all 1s ease-in 0.7s ",
+     
         }}
-        // className="services-container"
+       
       >
         {children}
       </div>
@@ -73,7 +73,8 @@ const HomePage = () => {
     };
     datafetch();
   }, []);
-  console.log(products);
+ 
+
   return (
     <div className="homePage">
       {/* HERO SECTION */}
