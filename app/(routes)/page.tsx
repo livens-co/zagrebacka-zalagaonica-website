@@ -1,5 +1,3 @@
-'use client'
-
 import getProducts from "@/actions/get-products";
 import ProductList from "@/components/ui/ProductList/ProductList";
 import Container from "@/components/ui/container";
@@ -23,86 +21,57 @@ import { Blog, Product } from "@/types";
 
 export const revalidate = 3;
 
-const HomePage =  () => {
-  // const products = await getProducts({ isFeatured: true });
-  // const articles = await getBlogs();
-  const [products, setProducts] = useState([]);
-  const [articles, setArticles] = useState([]);
-
-  useEffect(() => {
-    // Fetch products and update state
-    const fetchProducts = async () => {
-      try {
-        const response = await getProducts({ isFeatured: true });
-        setProducts(products);
-      } catch (error) {
-        console.error("Error fetching products:", error);
-      }
-    };
-
-    // Fetch articles and update state
-    const fetchArticles = async () => {
-      try {
-        const response = await getBlogs();
-        setArticles(articles);
-      } catch (error) {
-        console.error("Error fetching articles:", error);
-      }
-    };
-
-    fetchProducts();
-    fetchArticles();
-  }, []);
-
-  console.log(products)
+const HomePage = async () => {
+  const products = await getProducts({ isFeatured: true });
+  const articles = await getBlogs();
 
   return (
     <div className="homePage">
       {/* HERO SECTION */}
       {/* <Container> */}
-        <div className="heroSection">
-          <video autoPlay muted loop src="/2164973-preview.mp4" playsInline>
-            <source src="/2164973-preview.mp4" type="video/mp4" />
-          </video>
-          <div className="videoOverlay"></div>
-          <div className="heroImage">
-            <Image
-              priority
-              src="/assets/logo_white.png"
-              height={456}
-              width={1050}
-              alt="Zagrebačka zalagaonica"
-            />
-          </div>
-          <p>
-            Zagrebačka zalagaonica bavi se otkupom, zalogom i prodajom rabljene
-            robe poput zlata, luksuznih satova, elektronike, te ostalih predmeta
-            na upit.
-          </p>
-          <div className="contact">
-            <a href="tel:+385992173494" target="_blank">
-              <span>099 2173 494</span>
-              <div className="icon">
-                <LocalPhoneRoundedIcon />
-              </div>
-              <div className="buttonAnimation" />
-            </a>
-            <a href="mailto:info@zagrebacka-zalagaonica.hr" target="_blank">
-              <span>Kontaktirajte nas</span>
-              <div className="icon">
-                <MailRoundedIcon />
-              </div>
-              <div className="buttonAnimation" />
-            </a>
-            <a href="https://maps.app.goo.gl/zzsJvpo92Fsn8LscA" target="_blank">
-              <span>Krapinska ulica 5</span>
-              <div className="icon">
-                <FmdGoodRoundedIcon />
-              </div>
-              <div className="buttonAnimation" />
-            </a>
-          </div>
+      <div className="heroSection">
+        <video autoPlay muted loop src="/2164973-preview.mp4" playsInline>
+          <source src="/2164973-preview.mp4" type="video/mp4" />
+        </video>
+        <div className="videoOverlay"></div>
+        <div className="heroImage">
+          <Image
+            priority
+            src="/assets/logo_white.png"
+            height={456}
+            width={1050}
+            alt="Zagrebačka zalagaonica"
+          />
         </div>
+        <p>
+          Zagrebačka zalagaonica bavi se otkupom, zalogom i prodajom rabljene
+          robe poput zlata, luksuznih satova, elektronike, te ostalih predmeta
+          na upit.
+        </p>
+        <div className="contact">
+          <a href="tel:+385992173494" target="_blank">
+            <span>099 2173 494</span>
+            <div className="icon">
+              <LocalPhoneRoundedIcon />
+            </div>
+            <div className="buttonAnimation" />
+          </a>
+          <a href="mailto:info@zagrebacka-zalagaonica.hr" target="_blank">
+            <span>Kontaktirajte nas</span>
+            <div className="icon">
+              <MailRoundedIcon />
+            </div>
+            <div className="buttonAnimation" />
+          </a>
+          <a href="https://maps.app.goo.gl/zzsJvpo92Fsn8LscA" target="_blank">
+            <span>Krapinska ulica 5</span>
+            <div className="icon">
+              <FmdGoodRoundedIcon />
+            </div>
+            <div className="buttonAnimation" />
+          </a>
+        </div>
+      </div>
       {/* </Container> */}
 
       {/* OTKUP ZALOG PRODAJA */}
