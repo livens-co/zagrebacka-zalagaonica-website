@@ -53,7 +53,7 @@
       width: 60%;
       text-align: center;
       font-weight: 400;
-      color: var(--color-gray);
+      color: var(--primary);
       font-size: 1.15rem;
       z-index: 1;
     }
@@ -203,7 +203,7 @@
         }
 
         &::after {
-          content: '';
+          content: "";
           position: absolute;
           width: 100%;
           transform: scaleX(0);
