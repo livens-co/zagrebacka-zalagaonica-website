@@ -21,7 +21,7 @@ const ZalogPage = () => {
         <div className="image">
           <Image
             fill
-            src="https://img.freepik.com/premium-photo/3d-rendering-shiny-gold-bars-stacked-black-background-with-copy-space-3-illustration_67155-13973.jpg"
+            src="/gold.avif"
             alt="Zalog"
           />
           <div className="overlay" />

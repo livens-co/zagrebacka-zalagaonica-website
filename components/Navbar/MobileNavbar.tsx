@@ -60,7 +60,7 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({ data }) => {
           </div>
           <div className="featuredCategories">
             <div className="featuredCategory">
-              <Link href='/ponuda/mobiteli?brandSlug=apple' className="categoryImage" onClick={() => setIsOpen(!isOpen)}>
+              {/* <Link href='/ponuda/mobiteli?brandSlug=apple' className="categoryImage" onClick={() => setIsOpen(!isOpen)}>
                 <Image
                   priority
                   height={400}
@@ -69,10 +69,10 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({ data }) => {
                   alt="Apple iPhone"
                 />
               </Link>
-              <p>Apple mobiteli</p>
+              <p>Apple mobiteli</p> */}
             </div>
             <div className="featuredCategory">
-              <Link href='/ponuda/satovi?brandSlug=rolex' className="categoryImage" onClick={() => setIsOpen(!isOpen)}>
+              {/* <Link href='/ponuda/satovi?brandSlug=rolex' className="categoryImage" onClick={() => setIsOpen(!isOpen)}>
                 <Image
                   priority
                   height={400}
@@ -81,7 +81,7 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({ data }) => {
                   alt="Rolex"
                 />
               </Link>
-              <p>Rolex satovi</p>
+              <p>Rolex satovi</p> */}
             </div>
           </div>
         </div>

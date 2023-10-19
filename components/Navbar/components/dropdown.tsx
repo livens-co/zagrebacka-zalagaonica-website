@@ -70,7 +70,7 @@ const Dropdown: React.FC<DropdownProps> = ({ data, brands }) => {
         </div>
         <div className="dropdownCollections">
           <div className="featuredCollection">
-            <Link href='/ponuda/mobiteli?brandSlug=apple' className="collectionImage">
+            {/* <Link href='/ponuda/mobiteli?brandSlug=apple' className="collectionImage">
               <Image
                 priority
                 width={1000}
@@ -79,10 +79,10 @@ const Dropdown: React.FC<DropdownProps> = ({ data, brands }) => {
                 alt="Apple iPhone"
               />
             </Link>
-            <p>Apple mobiteli</p>
+            <p>Apple mobiteli</p> */}
           </div>
           <div className="featuredCollection">
-            <Link href='/ponuda/satovi?brandSlug=rolex' className="collectionImage">
+            {/* <Link href='/ponuda/satovi?brandSlug=rolex' className="collectionImage">
               <Image
                 priority
                 width={1000}
@@ -91,7 +91,7 @@ const Dropdown: React.FC<DropdownProps> = ({ data, brands }) => {
                 alt="Rolex"
               />
             </Link>
-            <p>Rolex Satovi</p>
+            <p>Rolex Satovi</p> */}
           </div>
         </div>
       </div>

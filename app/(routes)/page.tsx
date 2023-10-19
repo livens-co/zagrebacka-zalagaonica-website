@@ -132,7 +132,7 @@ const HomePage = () => {
             <div className="serviceImage">
               <Image
                 fill
-                src="https://www.notebookcheck.biz/uploads/tx_nbc2/AppleiPhone14Pro__1__01.JPG"
+                src="/mobitel.webp"
                 alt="Otkup"
               />
               <div className="overlay" />
@@ -145,7 +145,7 @@ const HomePage = () => {
             <div className="serviceImage">
               <Image
                 fill
-                src="https://img.freepik.com/premium-photo/3d-rendering-shiny-gold-bars-stacked-black-background-with-copy-space-3-illustration_67155-13973.jpg"
+                src="/gold.avif"
                 alt="Zalog"
               />
               <div className="overlay" />
@@ -158,7 +158,7 @@ const HomePage = () => {
             <div className="serviceImage">
               <Image
                 fill
-                src="https://lidermedia.hr/images/slike/2022/01/04/o_393279_1024.jpg"
+                src="/sat.jpeg"
                 alt="Otkup"
               />
               <div className="overlay" />

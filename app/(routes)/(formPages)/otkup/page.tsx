@@ -20,7 +20,7 @@ const OtkupPage = () => {
         <div className="image">
           <Image
             fill
-            src="https://www.notebookcheck.biz/uploads/tx_nbc2/AppleiPhone14Pro__1__01.JPG"
+            src="/mobitel.webp"
             alt="Otkup"
           />
           <div className="overlay" />
