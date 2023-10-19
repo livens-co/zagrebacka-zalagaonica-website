@@ -12,9 +12,7 @@ const NewsPage = async () => {
       <div className="newsPageHeader">
         <h1>Novosti</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum ut
-          ducimus necessitatibus perferendis vero? Ipsum pariatur quae debitis
-          numquam animi?
+          Ovdje možete pronaći aktualne ponude i novosti iz naše zalagaonice.
         </p>
       </div>
       <div className="newsPageContent">

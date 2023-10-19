@@ -47,7 +47,7 @@ const CategoryPage: React.FC<CategoryPageProps> = async ({
           </div>
           {/* FILTERS */}
           <div className="filterRow">
-            <Filter valueKey="brandSlug" name="Brendovi" data={brands} categorySlug={category.categorySlug}/>
+            <Filter valueKey="brandSlug" name="Brendovi" data={brands} categorySlug={category?.categorySlug}/>
             <p>
               {products.length}{' '}
               {products.length === 1 ? 'proizvod' : 'proizvoda'}
