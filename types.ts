@@ -49,4 +49,4 @@ export interface Blog {
   imageUrl: string;
   date: string;
   description: string;
-}
+} 

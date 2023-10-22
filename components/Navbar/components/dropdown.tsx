@@ -20,9 +20,11 @@ const Dropdown: React.FC<DropdownProps> = ({ data, brands }) => {
   }));
 
   const brandRoutes = brands.map((brand) => ({
-    href: `/ponuda/mobiteli?brandSlug=${brand.brandSlug}`,
+    href: `/ponuda/${brand.category.categorySlug}?brandSlug=${brand.brandSlug}`,
     label: brand.name,
   }));
+
+
 
   return (
     <>
@@ -55,7 +57,7 @@ const Dropdown: React.FC<DropdownProps> = ({ data, brands }) => {
             ))}
           </div>
           <div className="dropdownColumn">
-            <h3>Mobiteli</h3>
+            <h3></h3>
 
             {brandRoutes.map((brand) => (
               <Link
