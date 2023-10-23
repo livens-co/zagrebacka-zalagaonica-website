@@ -9,7 +9,7 @@ import Currency from '@/components/ui/currency';
 import ProductList from '@/components/ui/ProductList/ProductList';
 import Markdown from 'react-markdown';
 
-export const revalidate = 3;
+export const revalidate = 0;
 
 interface ProductPageProps {
   params: {
@@ -26,6 +26,8 @@ const ProductPage: React.FC<ProductPageProps> = async ({ params }) => {
   if (!product) {
     return null;
   }
+
+  
 
   return (
     <div className="productPage">

@@ -30,6 +30,7 @@ export interface Product {
 export interface Image {
   id: string;
   url: string;
+  priority: number;
 }
 
 export interface Brand {
