@@ -38,9 +38,7 @@ function Section({ children }: SectionProps) {
           transform: isInView ? "none" : "translateX(-100vw)",
           opacity: isInView ? 1 : 0,
           transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 0.7s ",
-     
         }}
-       
       >
         {children}
       </div>
@@ -73,7 +71,6 @@ const HomePage = () => {
     };
     datafetch();
   }, []);
- 
 
   return (
     <div className="homePage">
@@ -95,9 +92,8 @@ const HomePage = () => {
           />
         </div>
         <p>
-          Zagrebačka zalagaonica bavi se otkupom, zalogom i prodajom rabljene
-          robe poput zlata, luksuznih satova, elektronike, te ostalih predmeta
-          na upit.
+          Založite svoje dragocjenosti i zadržite ih u vlasništvu. U Zagrebačkoj
+          zalagaonici pružamo brzu isplatu uz sigurnost vaših predmeta.
         </p>
         <div className="contact">
           <a href="tel:+385992173494" target="_blank">
@@ -130,11 +126,7 @@ const HomePage = () => {
         <div className="servicesSection">
           <div className="service">
             <div className="serviceImage">
-              <Image
-                fill
-                src="/mobitel.webp"
-                alt="Otkup"
-              />
+              <Image fill src="/otkup.png" alt="Otkup" />
               <div className="overlay" />
             </div>
             <Link href="/otkup" className="serviceTitle">
@@ -143,11 +135,7 @@ const HomePage = () => {
           </div>
           <div className="service">
             <div className="serviceImage">
-              <Image
-                fill
-                src="/gold.avif"
-                alt="Zalog"
-              />
+              <Image fill src="/gold.avif" alt="Zalog" />
               <div className="overlay" />
             </div>
             <Link href="/zalog" className="serviceTitle">
@@ -156,11 +144,7 @@ const HomePage = () => {
           </div>
           <div className="service">
             <div className="serviceImage">
-              <Image
-                fill
-                src="/sat.jpeg"
-                alt="Otkup"
-              />
+              <Image fill src="/sat.jpeg" alt="Otkup" />
               <div className="overlay" />
             </div>
             <Link href="/ponuda" className="serviceTitle">
@@ -178,20 +162,20 @@ const HomePage = () => {
           </div>
           <div className="text">
             <p>
-              Zagrebačka zalagaonica bavi se otkupom, zalogom i prodajom
-              rabljene robe poput zlata, luksuznih satova, elektronike,
-              nekretnina, automobila te ostalih predmeta na upit.
+              Dobrodošli u Zagrebačku zalagaonicu. Naša specijalizacija leži u
+              pružanju usluge zaloga i otkupa za zlato, satove, umjetnine i
+              motorna vozila.
             </p>
             <p>
-              Ako želite prodati svoje predmete, nudimo vam povoljne opcije
-              prodaje. Naša zalagaonica ima široku mrežu kupaca i stručno znanje
-              koje nam pomaže postići najbolje cijene za vaše predmete.
+              Ovdje shvaćamo da ti predmeti imaju poseban značaj i vrijednost te
+              vam omogućavamo da ih koristite kao zalog za brzi pristup
+              gotovini.
             </p>
             <p>
-              Ako trebate hitan kratkoročni zajam, naša usluga zaloga je idealna
-              za vas. Možete koristiti svoje predmete kao kolateral kako biste
-              dobili novčani zajam, a mi ćemo se brinuti o sigurnom čuvanju
-              vaših dragocjenosti dok ne otplatite zajam.
+              Bez obzira želite li privremeno financirati svoje projekte,
+              riješiti neplanirane troškove ili iskoristiti priliku za ulaganje,
+              mi vam pružamo diskretnu i pouzdanu opciju za očuvanje vaših
+              dragocjenosti.
             </p>
           </div>
         </div>
@@ -211,10 +195,10 @@ const HomePage = () => {
             rješenjima.
           </h1>
         </div>
-      {/* </Section> */}
+        {/* </Section> */}
 
-      {/* NOVOSTI */}
-      {/* <Section> */}
+        {/* NOVOSTI */}
+        {/* <Section> */}
         <div className="featuredArticles">
           <h1 className="articlesTitle">Novosti</h1>
           {articles && <ArticleList items={articles} />}

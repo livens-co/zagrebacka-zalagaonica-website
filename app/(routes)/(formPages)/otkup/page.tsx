@@ -20,7 +20,7 @@ const OtkupPage = () => {
         <div className="image">
           <Image
             fill
-            src="/mobitel.webp"
+            src="/otkup.png"
             alt="Otkup"
           />
           <div className="overlay" />

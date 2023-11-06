@@ -18,3 +18,4 @@ const GalleryTab: React.FC<GalleryTabProps> = ({ image }) => {
 };
 
 export default GalleryTab;
+ 

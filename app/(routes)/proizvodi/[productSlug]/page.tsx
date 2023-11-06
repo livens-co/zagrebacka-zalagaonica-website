@@ -37,7 +37,7 @@ const ProductPage: React.FC<ProductPageProps> = async ({ params }) => {
           {product?.category?.name}
         </Link>{' '}
         /<p>{product?.name}</p>
-      </div>
+      </div> 
       <div className="productContainer">
         <div className="innerContainer">
           <Gallery images={product.images} />
