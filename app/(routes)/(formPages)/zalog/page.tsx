@@ -1,13 +1,13 @@
-import '../style.scss';
+import "../style.scss";
 
-import Accordion from '@mui/material/Accordion';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import Typography from '@mui/material/Typography';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import EmailIcon from '@mui/icons-material/Email';
-import Image from 'next/image';
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import EmailIcon from "@mui/icons-material/Email";
+import Image from "next/image";
 
 const ZalogPage = () => {
   return (
@@ -19,11 +19,7 @@ const ZalogPage = () => {
           rješenje za Vas!
         </p>
         <div className="image">
-          <Image
-            fill
-            src="/gold.avif"
-            alt="Zalog"
-          />
+          <Image fill src="/gold.avif" alt="Zalog" />
           <div className="overlay" />
         </div>
       </div>
@@ -68,39 +64,33 @@ const ZalogPage = () => {
 
         <Accordion
           style={{
-            backgroundColor: 'var(--bg-light)',
-            color: 'var(--primary)',
-            border: '0.05em solid var(--color-white-300)',
+            backgroundColor: "var(--bg-light)",
+            color: "var(--primary)",
+            border: "0.05em solid var(--color-white-300)",
           }}
         >
           <AccordionSummary
-            expandIcon={<ExpandMoreIcon style={{ color: 'var(--primary)' }} />}
+            expandIcon={<ExpandMoreIcon style={{ color: "var(--primary)" }} />}
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
-            <Typography>Kako funkcionira zalog?</Typography>
+            <Typography>Što je zalog?</Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              Nakon procjene predmeta kojeg želite založiti, za njega dobivate
-              dogovoreni iznos i potpisuje se ugovor sa zalagaonicom. Po isteku
-              roka od mjesec dana klijent može otkupiti svoj predmet za dobiveni
-              iznos i naknadu čuvarine. Zalog također možete produžiti,
-              plaćanjem samo naknade čuvarine, nakon isteka roka od mjesec dana.
-              Po predmet niste dužni doći, ukoliko tako odlučite i tada niste
-              dužni plaćati nikakve naknade.
+              Predmet koji ima vrijednost te kojim se jamči ispunjenje obveze.
             </Typography>
           </AccordionDetails>
         </Accordion>
         <Accordion
           style={{
-            backgroundColor: 'var(--bg-light)',
-            color: 'var(--primary)',
-            border: '0.05em solid var(--color-white-300)',
+            backgroundColor: "var(--bg-light)",
+            color: "var(--primary)",
+            border: "0.05em solid var(--color-white-300)",
           }}
         >
           <AccordionSummary
-            expandIcon={<ExpandMoreIcon style={{ color: 'var(--primary)' }} />}
+            expandIcon={<ExpandMoreIcon style={{ color: "var(--primary)" }} />}
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
@@ -108,8 +98,116 @@ const ZalogPage = () => {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              U zalog uzimamo zlato, dijamante, umjetnine, informatiku,
-              mobitele, satove, automobile, motore i ostale predmete na upit.
+              U zalog uzimamo zlatni nakit svih finoća, srebro, investicijsko
+              zlato, dijamante, dukate, umjetnine, luksuzne satove i motorna
+              vozila.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion
+          style={{
+            backgroundColor: "var(--bg-light)",
+            color: "var(--primary)",
+            border: "0.05em solid var(--color-white-300)",
+          }}
+        >
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon style={{ color: "var(--primary)" }} />}
+            aria-controls="panel1a-content"
+            id="panel1a-header"
+          >
+            <Typography>Kako založiti predmet?</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+              Nakon procjene po navedenim koracima, potrebna je samo osobna
+              iskaznica i potpisuje se ugovor te ste upućeni u sve uvjete. Po
+              isteku ugovora, klijent može preuzeti svoj predmet tako da vrati
+              dobiveni iznos te sve dogovorene naknade.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion
+          style={{
+            backgroundColor: "var(--bg-light)",
+            color: "var(--primary)",
+            border: "0.05em solid var(--color-white-300)",
+          }}
+        >
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon style={{ color: "var(--primary)" }} />}
+            aria-controls="panel1a-content"
+            id="panel1a-header"
+          >
+            <Typography>Koliko traje zalog?</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+              Ugovori se mogu sklapati na 8, 15 ili mjesec dana. Zalog možete
+              produljivati po potrebi uz plaćanje dogovorene naknade.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion
+          style={{
+            backgroundColor: "var(--bg-light)",
+            color: "var(--primary)",
+            border: "0.05em solid var(--color-white-300)",
+          }}
+        >
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon style={{ color: "var(--primary)" }} />}
+            aria-controls="panel1a-content"
+            id="panel1a-header"
+          >
+            <Typography>Kako se čuva zalog?</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+              Garantiramo sigurnost Vaših zaloga i čuvamo ih na osiguranim
+              mjestima.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion
+          style={{
+            backgroundColor: "var(--bg-light)",
+            color: "var(--primary)",
+            border: "0.05em solid var(--color-white-300)",
+          }}
+        >
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon style={{ color: "var(--primary)" }} />}
+            aria-controls="panel1a-content"
+            id="panel1a-header"
+          >
+            <Typography>Što ako ne dođem po svoj predmet u zalogu?</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+              Ukoliko po isteku dogovorenog perioda ne dođete preuzeti svoj
+              predmet, predmet postaje vlasništvo zalagaonice.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion
+          style={{
+            backgroundColor: "var(--bg-light)",
+            color: "var(--primary)",
+            border: "0.05em solid var(--color-white-300)",
+          }}
+        >
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon style={{ color: "var(--primary)" }} />}
+            aria-controls="panel1a-content"
+            id="panel1a-header"
+          >
+            <Typography>Kada mogu preuzeti svoj predmet?</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+              Predmet u zalogu možete preuzeti u bilo kojem trenutku trajanja
+              ugovora uz prethodnu najavu.
             </Typography>
           </AccordionDetails>
         </Accordion>
