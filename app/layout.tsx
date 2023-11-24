@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 
 import "./globals.css";
+import GoogleAnalytics from "./GoogleAnalytics";
 
 
 const font = Work_Sans({ subsets: ["latin"] });
@@ -28,6 +29,7 @@ export default function RootLayout({
       
       <body className={font.className}>
         <div className="mainLayout">
+          <GoogleAnalytics/>
           <Navbar />
           {children}
           <Footer />
