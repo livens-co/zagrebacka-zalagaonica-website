@@ -47,7 +47,7 @@ const FooterMobile = async () => {
       </div>
       <div className="legal">
         <p>
-          &copy; 2023 <CircleIcon /> Zagrebačaka zalagaonica
+          &copy; 2024 <CircleIcon /> Zagrebačaka zalagaonica
         </p>
         <p>
           Developed with 💙&#160;by

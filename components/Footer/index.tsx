@@ -63,7 +63,7 @@ const Footer = async () => {
             <Link href="//www.livens.co" target='_blank'>&#160;livens</Link>
           </p>
           <p className="copy">
-            &copy; 2023 <CircleIcon /> Zagrebačaka zalagaonica
+            &copy; 2024 <CircleIcon /> Zagrebačaka zalagaonica
           </p>
           <p>
             <Link href="/zastita-podataka">Zaštita podataka</Link>
