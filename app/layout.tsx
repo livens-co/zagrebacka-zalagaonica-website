@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 
 import "./globals.css";
 import GoogleAnalytics from "./GoogleAnalytics";
+import CookiesConsent from "@/components/CookiesConsent";
 
 
 const font = Work_Sans({ subsets: ["latin"] });
@@ -26,10 +27,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="hr">
-      
       <body className={font.className}>
         <div className="mainLayout">
           <GoogleAnalytics/>
+          <CookiesConsent />
           <Navbar />
           {children}
           <Footer />
