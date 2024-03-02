@@ -99,8 +99,8 @@ const ZalogPage = () => {
           <AccordionDetails>
             <Typography>
               U zalog uzimamo zlatni nakit svih finoća, srebro, investicijsko
-              zlato, dijamante, dukate, umjetnine, luksuzne satove i motorna
-              vozila.
+              zlato, dijamante, dukate, umjetnine, luksuzne satove, motorna
+              vozila te mobitele i tehnologiju.
             </Typography>
           </AccordionDetails>
         </Accordion>

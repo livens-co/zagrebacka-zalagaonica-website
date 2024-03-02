@@ -52,6 +52,7 @@
         letter-spacing: 2px;
         font-weight: 300;
         z-index: 10;
+        text-align: center;
       }
 
       &:hover {
@@ -72,4 +73,17 @@
       grid-template-columns: repeat(2, 1fr);
     }
   }
+}
+
+@media screen and (max-width: 500px) {
+.categoriesPage{
+  .categoriesList{
+    .categoryCard{
+      h2{
+        font-size: 1rem;
+        line-height: 1.4;
+      }
+    }
+  }
+}
 }

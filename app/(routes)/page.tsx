@@ -163,7 +163,7 @@ const HomePage = () => {
           <div className="text">
             <p>
               Dobrodošli u Zagrebačku zalagaonicu. Naša specijalizacija leži u
-              pružanju usluge zaloga i otkupa za zlato, satove, umjetnine i
+              pružanju usluge zaloga i otkupa za mobitele i tehnologiju, zlato, satove, umjetnine i
               motorna vozila.
             </p>
             <p>

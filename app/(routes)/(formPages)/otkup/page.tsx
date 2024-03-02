@@ -99,7 +99,7 @@ const OtkupPage = () => {
           <AccordionDetails>
             <Typography>
               Otkupljujemo zlatni nakit svih finoća, srebro, investicijsko
-              zlato, dijamante, dukate, umjetnine i luksuzne satove.
+              zlato, dijamante, dukate, umjetnine, luksuzne satove te mobitele i tehnologiju.
             </Typography>
           </AccordionDetails>
         </Accordion>

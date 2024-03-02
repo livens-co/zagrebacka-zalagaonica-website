@@ -2,7 +2,7 @@ import './style.scss'
 
 const NoResults = () => {
   return (
-    <div>No Results</div>
+    <div>Nema rezultata</div>
   )
 }
 
