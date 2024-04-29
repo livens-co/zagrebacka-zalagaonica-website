@@ -19,7 +19,7 @@ const MobileDropdown: React.FC<MobileDropdownProps> = ({
 
   const routes = data.map((route) => ({
     href: `/ponuda/${route.categorySlug}`,
-    label: route.name,
+    label: route.title,
   }));
 
   const handleClick = () => {
