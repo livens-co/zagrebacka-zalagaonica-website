@@ -4,7 +4,6 @@ import { Blog } from '@/types';
 import './style.scss';
 import NoResults from '@/components/NoResults/NoResults';
 import Image from 'next/image';
-import Markdown from 'react-markdown';
 import Link from 'next/link';
 
 interface ArticleListProps {
@@ -20,7 +19,7 @@ const ArticleList: React.FC<ArticleListProps> = ({ items }) => {
         .map((item) => (
           <Link
             href={`/novosti/${item.blogSlug}`}
-            key={item.id}
+            key={item._id}
             className="articleCard"
           >
             <div className="articleCardImage">

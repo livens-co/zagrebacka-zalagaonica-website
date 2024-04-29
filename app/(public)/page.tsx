@@ -1,6 +1,6 @@
 "use client";
 
-import getProducts from "@/actions/get-products";
+
 import ProductList from "@/components/ui/ProductList/ProductList";
 import Container from "@/components/ui/container";
 import Image from "next/image";
@@ -12,7 +12,7 @@ import FmdGoodRoundedIcon from "@mui/icons-material/FmdGoodRounded";
 import "./style.scss";
 import Link from "next/link";
 import ArticleList from "@/components/ui/ArticleList/ArticleList";
-import getBlogs from "@/actions/get-blogs";
+
 
 import PaymentIcon from "@mui/icons-material/Payment";
 import VerifiedIcon from "@mui/icons-material/Verified";
@@ -20,6 +20,9 @@ import HandshakeIcon from "@mui/icons-material/Handshake";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { useEffect, useRef, useState } from "react";
 import { useInView } from "framer-motion";
+import { Blog, Product } from "@/types";
+import getBlogs from "@/sanity/actions/get-blogs";
+import getFeaturedProducts from "@/sanity/actions/get-featured-products";
 
 // export const revalidate = 3;
 
@@ -50,26 +53,18 @@ const HomePage = () => {
   // const products = await getProducts({ isFeatured: true });
   // const articles = await getBlogs();
 
-  const [products, setProducts] = useState();
-  const [articles, setArticles] = useState();
+  const [products, setProducts] = useState<Product[] | null>(null);
+  const [articles, setArticles] = useState<Blog[] | null>(null);
 
   useEffect(() => {
-    const datafetch = async () => {
-      const products = await (
-        await fetch(
-          "https://admin.zagrebacka-zalagaonica.hr/api/949fc294-94c5-4ba3-a6af-5c700afe5f04/products?isFeatured=true"
-        )
-      ).json();
-      setProducts(products);
+    const fetchData = async () => {
+      const articles: Blog[] | null = await getBlogs();
+      const products: Product[] | null = await getFeaturedProducts()
 
-      const articles = await (
-        await fetch(
-          "https://admin.zagrebacka-zalagaonica.hr/api/949fc294-94c5-4ba3-a6af-5c700afe5f04/blog"
-        )
-      ).json();
-      setArticles(articles);
+      setArticles(articles)
+      setProducts(products);
     };
-    datafetch();
+    fetchData()
   }, []);
 
   return (
@@ -163,8 +158,8 @@ const HomePage = () => {
           <div className="text">
             <p>
               Dobrodošli u Zagrebačku zalagaonicu. Naša specijalizacija leži u
-              pružanju usluge zaloga i otkupa za mobitele i tehnologiju, zlato, satove, umjetnine i
-              motorna vozila.
+              pružanju usluge zaloga i otkupa za mobitele i tehnologiju, zlato,
+              satove, umjetnine i motorna vozila.
             </p>
             <p>
               Ovdje shvaćamo da ti predmeti imaju poseban značaj i vrijednost te

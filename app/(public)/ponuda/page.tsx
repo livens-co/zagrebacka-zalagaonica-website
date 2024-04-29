@@ -1,12 +1,14 @@
-import getCategories from '@/actions/get-categories';
+
+import getCategories from '@/sanity/actions/get-categories';
 import './style.scss';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Category } from '@/types';
 
-export const revalidate = 3; 
+export const revalidate = 1; 
 
 const CategoriesPage = async () => {
-  const categories = await getCategories();
+  const categories: Category[] = await getCategories();
 
   return (
     <div className="categoriesPage">
@@ -15,12 +17,12 @@ const CategoriesPage = async () => {
         {categories.map((item) => (
           <Link
             href={`/ponuda/${item?.categorySlug}`}
-            key={item.id}
+            key={item._id}
             className="categoryCard"
           >
-            <Image src={item?.imageUrl} alt={item?.name} fill />
+            <Image src={item?.imageUrl} alt={item?.title} fill />
             <div className="imageOverlay" />
-            <h2>{item?.name}</h2>
+            <h2>{item?.title}</h2>
           </Link>
         ))}
       </div>

@@ -10,6 +10,14 @@ const nextConfig = {
       'www.notebookcheck.biz',
       'lidermedia.hr',
     ],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cdn.sanity.io",
+        port: "",
+        pathname: "/images/29qcn3pa/**",
+      },
+    ],
   },
 };
 

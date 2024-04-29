@@ -1,11 +1,13 @@
-import getBlogs from '@/actions/get-blogs';
+
+import { Blog } from '@/types';
 import './style.scss';
 import ArticleList from '@/components/ui/ArticleList/ArticleList';
+import getBlogs from '@/sanity/actions/get-blogs';
 
-export const revalidate = 3;
+export const revalidate = 1;
 
 const NewsPage = async () => {
-  const blogs = await getBlogs();
+const blogs: Blog[] = await getBlogs();
 
   return (
     <div className="newsPage">
@@ -17,7 +19,7 @@ const NewsPage = async () => {
       </div>
       <div className="newsPageContent">
         {blogs.map((item) => (
-          <ArticleList items={blogs} key={item.id} />
+          <ArticleList items={blogs} key={item._id} />
         ))}
       </div>
     </div>

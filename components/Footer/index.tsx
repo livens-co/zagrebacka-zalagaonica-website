@@ -2,17 +2,19 @@ import Image from 'next/image';
 import './style.scss';
 import Link from 'next/link';
 import FooterLinks from './components/links';
-import getCategories from '@/actions/get-categories';
+ 
 
 import PetsRoundedIcon from '@mui/icons-material/PetsRounded';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import CircleIcon from '@mui/icons-material/Circle';
 import FooterMobile from './FooterMobile';
+import getCategories from '@/sanity/actions/get-categories';
+import { Category } from '@/types';
 
 export const revalidate = 3;
 
 const Footer = async () => {
-  const categories = await getCategories();
+  const categories: Category[] = await getCategories();
 
   return (
     <footer>

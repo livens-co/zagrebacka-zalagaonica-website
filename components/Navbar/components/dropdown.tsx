@@ -8,21 +8,21 @@ import Image from 'next/image';
 
 interface DropdownProps {
   data: Category[];
-  brands: Brand[];
+  // brands: Brand[];
 }
 
-const Dropdown: React.FC<DropdownProps> = ({ data, brands }) => {
+const Dropdown: React.FC<DropdownProps> = ({ data }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const routes = data.map((route) => ({
     href: `/ponuda/${route.categorySlug}`,
-    label: route.name,
+    label: route.title,
   }));
 
-  const brandRoutes = brands.map((brand) => ({
-    href: `/ponuda/${brand.category.categorySlug}?brandSlug=${brand.brandSlug}`,
-    label: brand.name,
-  }));
+  // const brandRoutes = brands.map((brand) => ({
+  //   href: `/ponuda/${brand.category.categorySlug}?brandSlug=${brand.brandSlug}`,
+  //   label: brand.title,
+  // }));
 
 
 
@@ -59,7 +59,7 @@ const Dropdown: React.FC<DropdownProps> = ({ data, brands }) => {
           <div className="dropdownColumn">
             <h3></h3>
 
-            {brandRoutes.map((brand) => (
+            {/* {brandRoutes.map((brand) => (
               <Link
                 key={brand.href}
                 href={brand.href}
@@ -67,7 +67,7 @@ const Dropdown: React.FC<DropdownProps> = ({ data, brands }) => {
               >
                 {brand.label}
               </Link>
-            ))}
+            ))} */}
           </div>
         </div>
         <div className="dropdownCollections">

@@ -1,11 +1,11 @@
-import getBlog from '@/actions/get-blog';
-import './style.scss';
-import ArticleContent from './components/content';
-import Image from 'next/image';
-import Link from 'next/link';
-
-import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
-import CircleRoundedIcon from '@mui/icons-material/CircleRounded';
+import "./style.scss";
+import Image from "next/image";
+import Link from "next/link";
+import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
+import CircleRoundedIcon from "@mui/icons-material/CircleRounded";
+import { Blog } from "@/types";
+import getBlog from "@/sanity/actions/get-blog";
+import { PortableText } from "next-sanity";
 
 export const revalidate = 3;
 
@@ -15,28 +15,35 @@ interface ArticlePageProps {
   };
 }
 
-const ArticlePage: React.FC<ArticlePageProps> = async ({ params }) => {
-  const blog = await getBlog(params.blogSlug);
+const ArticlePage: React.FC<ArticlePageProps> = async ({
+  params: { blogSlug },
+}) => {
+  const blog: Blog | null = await getBlog(blogSlug);
 
   if (!blog) {
-    return null;
+    return <div>Članak nije pronađen</div>;
   }
 
   return (
     <div className="articlePage">
       <div className="articlePageHeader">
-      <Link href='/novosti'><CircleRoundedIcon/>Natrag</Link>
+        <Link href="/novosti">
+          <CircleRoundedIcon />
+          Natrag
+        </Link>
         <div className="headerImage">
-          <Image fill src={blog.imageUrl} alt={blog.title} />
+          <Image fill src={blog?.imageUrl} alt={blog?.title} />
         </div>
 
-        <h1>{blog.title}</h1>
+        <h1>{blog?.title}</h1>
       </div>
       <div className="articleContent">
-        <ArticleContent content={blog.content} />
+        <PortableText value={blog?.content} />
       </div>
       <div className="articleFooter">
-        <Link href='/novosti'>Više novosti <ArrowForwardIosRoundedIcon/></Link>
+        <Link href="/novosti">
+          Više novosti <ArrowForwardIosRoundedIcon />
+        </Link>
       </div>
     </div>
   );

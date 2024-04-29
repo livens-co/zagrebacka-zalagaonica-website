@@ -10,7 +10,7 @@ interface FooterLinkProps {
 const FooterLinks: React.FC<FooterLinkProps> = ({ data }) => {
   const routes = data.map((route) => ({
     href: `/ponuda/${route.categorySlug}`,
-    label: route.name,
+    label: route.title,
   }));
 
   return (

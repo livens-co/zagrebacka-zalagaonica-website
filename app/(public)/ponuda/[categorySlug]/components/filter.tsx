@@ -74,7 +74,7 @@ const Filter: React.FC<FilterProps> = ({
   };
 
   const filteredBrands = data.filter(
-    (brand) => brand.category.categorySlug === categorySlug
+    (brand) => brand?.category?.categorySlug === categorySlug
   );
 
   return (
@@ -106,7 +106,7 @@ const Filter: React.FC<FilterProps> = ({
                   : { color: 'var(--primary)' }
               }
             >
-              {filter.name}
+              {filter.title}
             </button>
           ))}
         </div>

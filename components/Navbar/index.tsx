@@ -1,4 +1,4 @@
-import getCategories from '@/actions/get-categories';
+
 
 import './style.scss';
 import Image from 'next/image';
@@ -6,13 +6,14 @@ import Link from 'next/link';
 import Dropdown from './components/dropdown';
 import MobileNavbar from './MobileNavbar';
 import getFeaturedBrands from '@/actions/get-featured-brands';
+import { Category } from '@/types';
+import getCategories from '@/sanity/actions/get-categories';
 
 export const revalidate = 3;
 
 const Navbar = async () => {
-  const categories = await getCategories();
+  const categories: Category[] = await getCategories();
 
-  const brands = await getFeaturedBrands({isFeatured: true})
 
   return (
     <>
@@ -33,7 +34,7 @@ const Navbar = async () => {
             />
           </Link>
           <div className="links">
-            <Dropdown data={categories} brands={brands} />
+            <Dropdown data={categories} />
             <Link href="/novosti">Novosti</Link>
             <Link href="/kontakt">Kontakt</Link>
           </div>

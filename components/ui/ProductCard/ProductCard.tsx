@@ -1,6 +1,6 @@
 'use client';
 
-import { Product } from '@/types';
+import { Category, Product } from '@/types';
 import './style.scss'; 
 // import Image from 'next/image';
 // import Link from 'next/link';
@@ -38,19 +38,16 @@ interface ProductCardProps {
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
-  // Sort the images by incrementValue in ascending order
-  const sortedImages = [...data.images].sort((a, b) => a.priority - b.priority);
-  // Select the first image (the one with the lowest increment value)
-  const lowestIncrementImage = sortedImages[0];
+  
 
   return (
-    <Link href={`/proizvodi/${data?.productSlug}`} className="productCard">
+    <Link href={`/proizvodi/${data?.slug}`} className="productCard">
       <div className="productImage">
-        <Image src={lowestIncrementImage?.url} fill alt="Image" />
+        <Image src={data.images[0]?.toString()} fill alt="Image" />
       </div>
       <div className="productInfo">
-        <p>{data?.category?.name}</p>
-        <h2>{data?.name}</h2>
+        <p>{data.categories[0]?.title}</p>
+        <h2>{data?.title}</h2>
         <h3>
           <Currency value={data?.price} />
         </h3>

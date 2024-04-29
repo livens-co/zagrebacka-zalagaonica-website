@@ -1,52 +1,58 @@
+import { PortableTextBlock } from "next-sanity";
+
 export interface Billboard {
   label: string;
   id: string;
   imageUrl: string;
 }
 
-export interface Category {
-  id: string;
-  categorySlug: string;
-  name: string;
-  description: string;
-  imageUrl: string;
-  isActive: boolean;
-}
+
 
 export interface Product {
-  date: string | number | Date;
-  id: string;
-  category: Category;
-  name: string;
+  _id: string;
+  date: string;
+  categories: Category[];
+  title: string;
   price: number;
-  productSlug: string;
-  description: string;
-  paymentMethod: string;
+  slug: string;
+  description: PortableTextBlock[];
+  paymentMethod: PortableTextBlock[];
   isFeatured: boolean;
-  brand: Brand;
-  images: Image[];
+  brands: Brand[];
+  images: string[];
+  
 }
 
-export interface Image {
-  id: string;
-  url: string;
-  priority: number;
+export interface Category {
+  _id: string;
+  categorySlug: string;
+  title: string;
+  description: PortableTextBlock[];
+  imageUrl: string;
+  isActive: boolean;
+  products: Product[];
 }
+
+// export interface Image {
+//   id: string;
+//   url: string;
+//   priority: number;
+// }
 
 export interface Brand {
-  id: string;
+  _id: string;
   brandSlug: string;
-  name: string;
+  title: string;
   category: Category;
   isActive: boolean;
   isFeatured: boolean;
 }
 
 export interface Blog {
-  id: string;
+  _id: string;
   blogSlug: string;
   title: string;
-  content: string;
+  content:  PortableTextBlock[];
   imageUrl: string;
   date: string;
   description: string;

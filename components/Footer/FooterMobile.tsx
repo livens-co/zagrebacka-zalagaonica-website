@@ -7,11 +7,12 @@ import CircleIcon from '@mui/icons-material/Circle';
 import Image from 'next/image';
 
 import MobileDropdown from './components/mobileDropdown';
-import getCategories from '@/actions/get-categories';
 import BackToTop from '../ui/backToTop';
+import { Category } from '@/types';
+import getCategories from '@/sanity/actions/get-categories';
 
 const FooterMobile = async () => {
-  const categories = await getCategories();
+  const categories: Category[] = await getCategories();
 
   return (
     <div className="footerMobile">
