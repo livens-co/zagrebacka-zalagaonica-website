@@ -19,7 +19,7 @@ export enum SortBy {
 export function sortProducts(products: Product[], sortBy: SortBy): Product[] {
   switch (sortBy) {
     case SortBy.NAME:
-      return products.slice().sort((a, b) => a.name.localeCompare(b.name));
+      return products.slice().sort((a, b) => a.title.localeCompare(b.title));
     case SortBy.PRICE:
       return products.slice().sort((a, b) => a.price - b.price);
     default:
