@@ -1,15 +1,15 @@
-import getProducts from '@/actions/get-products';
-import getCategory from '@/actions/get-category';
-import getBrands from '@/actions/get-brands';
-import Billboard from '@/components/ui/Billboard/Billboard';
+import getProducts from "@/actions/get-products";
+import getCategory from "@/actions/get-category";
+import getBrands from "@/actions/get-brands";
+import Billboard from "@/components/ui/Billboard/Billboard";
 
-import './style.scss';
-import Container from '@/components/ui/container';
-import ProductCard from '@/components/ui/ProductCard/ProductCard';
-import NoResults from '@/components/NoResults/NoResults';
-import Filter from './components/filter';
-import SortProducts from './components/sort';
-import { sortProducts } from '@/lib/utils';
+import "./style.scss";
+import Container from "@/components/ui/container";
+import ProductCard from "@/components/ui/ProductCard/ProductCard";
+import NoResults from "@/components/NoResults/NoResults";
+import Filter from "./components/filter";
+import SortProducts from "./components/sort";
+import { sortProducts } from "@/lib/utils";
 
 export const revalidate = 3;
 
@@ -33,24 +33,25 @@ const CategoryPage: React.FC<CategoryPageProps> = async ({
   const category = await getCategory(params.categorySlug);
   const brands = await getBrands();
 
-
   return (
     <>
       <div className="collectionPage">
         <Container>
           <div className="categoryHeader">
-        
             <h1>{category?.name}</h1>
-            <p>
-              {category?.description}
-            </p>
+            <p>{category?.description}</p>
           </div>
           {/* FILTERS */}
           <div className="filterRow">
-            <Filter valueKey="brandSlug" name="Brendovi" data={brands} categorySlug={category?.categorySlug}/>
+            <Filter
+              valueKey="brandSlug"
+              name="Brendovi"
+              data={brands}
+              categorySlug={category?.categorySlug}
+            />
             <p>
-              {products.length}{' '}
-              {products.length === 1 ? 'proizvod' : 'proizvoda'}
+              {products.length}{" "}
+              {products.length === 1 ? "proizvod" : "proizvoda"}
             </p>
           </div>
         </Container>

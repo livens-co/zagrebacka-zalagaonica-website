@@ -8,7 +8,6 @@ import "./globals.css";
 import GoogleAnalytics from "./GoogleAnalytics";
 import CookiesConsent from "@/components/CookiesConsent";
 
-
 const font = Work_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -29,7 +28,7 @@ export default function RootLayout({
     <html lang="hr">
       <body className={font.className}>
         <div className="mainLayout">
-          <GoogleAnalytics/>
+          <GoogleAnalytics />
           <CookiesConsent />
           <Navbar />
           {children}
